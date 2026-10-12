@@ -1,0 +1,30 @@
+{
+  "verdict": "INVALID",
+  "host": "192.168.31.9",
+  "port": 80,
+  "requested_count": 1,
+  "total_sent": 1,
+  "success_count": 0,
+  "interval_sec": 0.2,
+  "per_request_deadline_sec": 10.0,
+  "start_time": "2026-10-04T23:09:10.422773",
+  "end_time": "2026-10-04T23:09:10.825911",
+  "commit_sha": null,
+  "build_sha": null,
+  "error": "HTTP 503: ERROR CAMERA_BUSY_STREAM",
+  "frames": [
+    {
+      "index": 1,
+      "status": 503,
+      "rtt_ms": 389.9999999994179,
+      "frame_id": null,
+      "boot_id": null,
+      "t_frame_us": null,
+      "t_req_us": null,
+      "discarded": null,
+      "body_len": 24,
+      "error": "HTTP 503: ERROR CAMERA_BUSY_STREAM",
+      "valid": false
+    }
+  ]
+}

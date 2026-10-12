@@ -1,0 +1,154 @@
+{
+  "report_id": "sharpness_20260917_quang_hoc",
+  "created_at": "2026-09-17T13:57:32.006+07:00",
+  "script": "pc/sharpness.py",
+  "source": {
+    "commit": "9839263a194e55e31b11d9ba5f39524b3ce7c7ff",
+    "branch": "feat/quang-hoc-phan-tich",
+    "dirty": false
+  },
+  "args": {
+    "roi": [
+      "capture_qh_200mm=255,0,120,395",
+      "capture_qh_250mm=280,0,95,350",
+      "capture_qh_350mm=297,0,71,312"
+    ],
+    "ruler": [
+      "capture_qh_200mm=328.0,45.7,328.0,169.3,30",
+      "capture_qh_250mm=331.0,19.0,331.0,180.0,50",
+      "capture_qh_350mm=334.0,9.2,334.0,190.8,80"
+    ],
+    "sessions": [
+      "capture_qh_200mm",
+      "capture_qh_250mm",
+      "capture_qh_350mm"
+    ]
+  },
+  "annotated": [
+    "annotated_capture_qh_200mm.jpg",
+    "annotated_capture_qh_250mm.jpg",
+    "annotated_capture_qh_350mm.jpg"
+  ],
+  "sessions": [
+    {
+      "session_id": "capture_qh_200mm",
+      "dir": "D:\\scanner3d\\data\\raw\\capture_qh_200mm",
+      "framesize": "VGA",
+      "note": "quang hoc 200 mm; hop 30x32x49 mm; thuoc dan mat truoc, vach 0 ben trai; den phong",
+      "capture_commit": "9839263a194e55e31b11d9ba5f39524b3ce7c7ff",
+      "started_at": "2026-09-17T13:34:50.406+07:00",
+      "verdict": "PASS",
+      "skipped_decode_fail": 0,
+      "n_images": 5,
+      "width": 640,
+      "height": 480,
+      "roi": [
+        255,
+        0,
+        120,
+        395
+      ],
+      "lap_var_median": 10.326302719800506,
+      "lap_var_min": 10.193886485231635,
+      "lap_var_max": 10.534055387846664,
+      "grad_energy_median": 525.1850605942985,
+      "mean_median": 142.2346624472574,
+      "std_median": 38.67019328304595,
+      "sat_frac_max": 0.0,
+      "dark_frac_max": 0.0,
+      "representative": "img_0005.jpg",
+      "ruler": {
+        "x1": 328.0,
+        "y1": 45.7,
+        "x2": 328.0,
+        "y2": 169.3,
+        "mm": 30.0,
+        "px": 123.60000000000001,
+        "mm_per_px": 0.24271844660194172
+      },
+      "mm_per_px": 0.24271844660194172,
+      "fov_w_mm": 155.3398058252427,
+      "fov_h_mm": 116.50485436893203
+    },
+    {
+      "session_id": "capture_qh_250mm",
+      "dir": "D:\\scanner3d\\data\\raw\\capture_qh_250mm",
+      "framesize": "VGA",
+      "note": "quang hoc 250 mm; hop 30x32x49 mm; thuoc dan mat truoc, vach 0 ben trai; den phong",
+      "capture_commit": "9839263a194e55e31b11d9ba5f39524b3ce7c7ff",
+      "started_at": "2026-09-17T13:38:57.431+07:00",
+      "verdict": "PASS",
+      "skipped_decode_fail": 0,
+      "n_images": 5,
+      "width": 640,
+      "height": 480,
+      "roi": [
+        280,
+        0,
+        95,
+        350
+      ],
+      "lap_var_median": 13.916638543505886,
+      "lap_var_min": 13.646129103403732,
+      "lap_var_max": 14.495597159121017,
+      "grad_energy_median": 780.7771598071931,
+      "mean_median": 152.2673984962406,
+      "std_median": 35.584041496837955,
+      "sat_frac_max": 0.0,
+      "dark_frac_max": 0.0,
+      "representative": "img_0001.jpg",
+      "ruler": {
+        "x1": 331.0,
+        "y1": 19.0,
+        "x2": 331.0,
+        "y2": 180.0,
+        "mm": 50.0,
+        "px": 161.0,
+        "mm_per_px": 0.3105590062111801
+      },
+      "mm_per_px": 0.3105590062111801,
+      "fov_w_mm": 198.75776397515526,
+      "fov_h_mm": 149.06832298136644
+    },
+    {
+      "session_id": "capture_qh_350mm",
+      "dir": "D:\\scanner3d\\data\\raw\\capture_qh_350mm",
+      "framesize": "VGA",
+      "note": "quang hoc 350 mm; hop 30x32x49 mm; thuoc dan mat truoc, vach 0 ben trai; den phong",
+      "capture_commit": "9839263a194e55e31b11d9ba5f39524b3ce7c7ff",
+      "started_at": "2026-09-17T13:41:26.733+07:00",
+      "verdict": "PASS",
+      "skipped_decode_fail": 0,
+      "n_images": 5,
+      "width": 640,
+      "height": 480,
+      "roi": [
+        297,
+        0,
+        71,
+        312
+      ],
+      "lap_var_median": 46.35473287229464,
+      "lap_var_min": 42.060765880689026,
+      "lap_var_max": 48.80981942250609,
+      "grad_energy_median": 1526.0530154277699,
+      "mean_median": 158.72408811845432,
+      "std_median": 33.869250947120435,
+      "sat_frac_max": 0.0,
+      "dark_frac_max": 0.0,
+      "representative": "img_0002.jpg",
+      "ruler": {
+        "x1": 334.0,
+        "y1": 9.2,
+        "x2": 334.0,
+        "y2": 190.8,
+        "mm": 80.0,
+        "px": 181.60000000000002,
+        "mm_per_px": 0.4405286343612334
+      },
+      "mm_per_px": 0.4405286343612334,
+      "fov_w_mm": 281.9383259911894,
+      "fov_h_mm": 211.45374449339204
+    }
+  ]
+}

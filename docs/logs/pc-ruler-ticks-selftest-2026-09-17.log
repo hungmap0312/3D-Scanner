@@ -1,0 +1,14 @@
+  autocorr: chu ky 37.50 gan 37.5                              OK
+  autocorr: dinh ro (0.64 > 0.5)                               OK
+  minima: tim thay 7 vach (7)                                  OK
+  fit_grid: 37.500 px/cm, resid 0.57                           OK
+  autocorr: lag 60-90 bat boi 2x (75.0) -> can --lag hep       OK
+  edge: buoc sac cho be rong < 1 px (0.80)                     OK
+  edge: mo 5 px cho be rong 3-5 px (4.00)                      OK
+  edge: khong co mep -> khong co hang                          OK
+  analyze_session: 3 anh                                       OK
+  analyze_session: 30 px/cm (30.20)                            OK
+  analyze_session: FOV 106.7 mm (106.0)                        OK
+  analyze_session: mep JPEG sac < 2 px (0.79)                  OK
+  analyze_session: ruler_arg co ID va x giua dai               OK
+SELFTEST: PASS

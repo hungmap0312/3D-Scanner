@@ -1,0 +1,26 @@
+# Phep thu vong thu lai Wi-Fi sau khi sua loi "sta is connecting".
+# Nguoi dung chep tu Serial Monitor ngay 2026-09-16.
+# Phan 1: ten Wi-Fi khong ton tai.
+
+Camera PID: 0x3660
+WiFi connecting........................................
+WiFi connect FAILED after 20000 ms, status=6
+No network yet. Camera is initialised; loop() keeps retrying Wi-Fi.
+WiFi not connected, retrying
+WiFi connecting........................................
+WiFi connect FAILED after 20000 ms, status=6
+WiFi not connected, retrying
+WiFi connecting........................................
+WiFi connect FAILED after 20000 ms, status=6
+WiFi not connected, retrying
+WiFi connecting........................................
+WiFi connect FAILED after 20000 ms, status=6
+WiFi not connected, retrying
+WiFi connecting........................................
+
+# Phan 2: tra lai ten Wi-Fi dung, nap lai.
+
+Camera PID: 0x3660
+WiFi connecting....
+WiFi connected, IP 192.168.31.9
+Camera Ready! Use 'http://192.168.31.9' to connect

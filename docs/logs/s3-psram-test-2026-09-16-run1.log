@@ -1,0 +1,9 @@
+# Lan nap dau tien cua PsramTest, ban tai commit 42fa3a2.
+# Nguoi dung chep tu Serial Monitor ngay 2026-09-16.
+# Ket qua: FAIL vi firmware khong nhan PSRAM. Xem STATUS.md ve nguyen nhan nghi van.
+
+=== PsramTest: ghi/doc PSRAM tren ESP32-S3 ===
+psramFound: no
+PSRAM truoc khi thu: total 0 KB, free 0 KB, largest free block 0 KB
+RESULT_1MIB    : FAIL (khong nhan PSRAM)
+RESULT_LARGEST : SKIP

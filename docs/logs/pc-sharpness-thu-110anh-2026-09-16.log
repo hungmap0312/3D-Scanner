@@ -1,0 +1,28 @@
+phien                           n kich_thuoc  lap_var_med  lap_var_min  lap_var_max grad_med   mean sat_max      mm/px  fov_w_mm
+--------------------------------------------------------------------------------------------------------------------------------
+capture_20260916_154847       100 640x480            3.1          0.4         19.8     160  176.6   0.035          -         -
+capture_20260916_161021        10 800x600            2.8          2.7         44.7     117  176.7   0.458          -         -
+
+Phien capture_20260916_154847
+  thu muc      : D:\scanner3d\data\raw\capture_20260916_154847
+  note         : phien A tuan 1, VGA
+  framesize    : VGA, anh 640x480, ROI x,y,w,h = 160,120,320,240
+  anh hop le   : 100 (bo 0 anh decode_ok=False theo frames.csv)
+  lap_var      : trung vi 3.1, min 0.4, max 19.8
+  grad_energy  : trung vi 160
+  do sang ROI  : mean 176.6, std 14.4; bao hoa toi da 0.035, toi toi da 0.000
+  anh dai dien : img_0030.jpg
+  thuoc        : khong nhap, chua tinh mm/px
+
+Phien capture_20260916_161021
+  thu muc      : D:\scanner3d\data\raw\capture_20260916_161021
+  note         : phien B tuan 1, SVGA
+  framesize    : SVGA, anh 800x600, ROI x,y,w,h = 200,150,400,300
+  anh hop le   : 10 (bo 0 anh decode_ok=False theo frames.csv)
+  lap_var      : trung vi 2.8, min 2.7, max 44.7
+  grad_energy  : trung vi 117
+  do sang ROI  : mean 176.7, std 15.0; bao hoa toi da 0.458, toi toi da 0.000
+  anh dai dien : img_0007.jpg
+  thuoc        : khong nhap, chua tinh mm/px
+
+Da ghi ho so: D:\scanner3d\docs\logs\sharpness_20260916_thu_110anh

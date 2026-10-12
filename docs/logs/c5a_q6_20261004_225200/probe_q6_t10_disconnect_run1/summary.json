@@ -1,0 +1,69 @@
+{
+  "verdict": "INVALID",
+  "host": "192.168.31.9",
+  "port": 80,
+  "requested_count": 30,
+  "total_sent": 4,
+  "success_count": 3,
+  "interval_sec": 0.5,
+  "per_request_deadline_sec": 10.0,
+  "start_time": "2026-10-04T23:11:49.969423",
+  "end_time": "2026-10-04T23:12:00.140081",
+  "commit_sha": null,
+  "build_sha": null,
+  "error": "TIMEOUT_TOTAL_DEADLINE: Request vuot qua deadline tong 10.0s (cleanup mat 0.0ms)",
+  "frames": [
+    {
+      "index": 1,
+      "status": 200,
+      "rtt_ms": 547.0000000022992,
+      "frame_id": 81,
+      "boot_id": "a37295f27df1a53a5b08d3d81544fb4b",
+      "t_frame_us": 2479238258,
+      "t_req_us": 2479223390,
+      "discarded": 1,
+      "body_len": 11557,
+      "error": null,
+      "valid": true
+    },
+    {
+      "index": 2,
+      "status": 200,
+      "rtt_ms": 2375.0,
+      "frame_id": 82,
+      "boot_id": "a37295f27df1a53a5b08d3d81544fb4b",
+      "t_frame_us": 2480174713,
+      "t_req_us": 2480168846,
+      "discarded": 1,
+      "body_len": 11561,
+      "error": null,
+      "valid": true
+    },
+    {
+      "index": 3,
+      "status": 200,
+      "rtt_ms": 688.0000000019209,
+      "frame_id": 83,
+      "boot_id": "a37295f27df1a53a5b08d3d81544fb4b",
+      "t_frame_us": 2483056109,
+      "t_req_us": 2483030121,
+      "discarded": 1,
+      "body_len": 11548,
+      "error": null,
+      "valid": true
+    },
+    {
+      "index": 4,
+      "status": null,
+      "rtt_ms": 5014.999999999418,
+      "frame_id": null,
+      "boot_id": null,
+      "t_frame_us": null,
+      "t_req_us": null,
+      "discarded": null,
+      "body_len": 0,
+      "error": "TIMEOUT_TOTAL_DEADLINE: Request vuot qua deadline tong 10.0s (cleanup mat 0.0ms)",
+      "valid": false
+    }
+  ]
+}

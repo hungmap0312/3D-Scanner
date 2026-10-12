@@ -1,0 +1,6 @@
+Phiên đo lại Q6-T9 sau lượt INVALID ở phiên c5a_q6_20261004_221728. Không build hay nạp lại; cùng lần khởi động Boot a37295f2. Profile áp lại lúc khoảng 22:5x.
+COM9, IP 192.168.31.9, router cách khoảng 1,5 m. Ping sau khi chỉnh Wi-Fi: 0% mất gói, trung bình 206 ms, cao nhất 772 ms.
+Ánh sáng: ban đêm, có bật 2 đèn tuýp trên trần.
+5.2 lần 1/2/3: tắt Wi-Fi sau dòng [3/30]/[4/30]/[3/30].
+5.3 lần 1/2/3: bấm RST sau dòng [3/15]/[5/15]/[6/15].
+Không có hành vi nào bất thường.

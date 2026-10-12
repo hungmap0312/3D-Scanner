@@ -1,0 +1,6 @@
+idx,t_request,elapsed_ms,http_status,bytes,content_length_hdr,sha256_16,decode_ok,width,height,size_ok,x_timestamp,ts_ms,ts_delta_ms,identical_to_prev,retries,failed_attempt_files,error
+1,2026-09-24T17:00:34.005+07:00,242.6,200,9604,9604,0ffb19eaffd35be1,True,640,480,True,391.652945,391652,,False,0,,
+2,2026-09-24T17:00:36.006+07:00,132.2,200,9639,9639,dfcf6012e8f471dc,True,640,480,True,393.669904,393669,2017,False,0,,
+3,2026-09-24T17:00:38.006+07:00,161.9,200,9608,9608,538538cc014de2de,True,640,480,True,395.650852,395650,1981,False,0,,
+4,2026-09-24T17:00:40.007+07:00,164.0,200,9588,9588,a7a4324d5d1fa666,True,640,480,True,397.667818,397667,2017,False,0,,
+5,2026-09-24T17:00:42.007+07:00,115.1,200,9597,9597,ffca99acda4ff702,True,640,480,True,399.648766,399648,1981,False,0,,

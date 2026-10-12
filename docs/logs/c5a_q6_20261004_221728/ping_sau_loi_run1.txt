@@ -1,0 +1,37 @@
+
+Pinging 192.168.31.9 with 32 bytes of data:
+Reply from 192.168.31.9: bytes=32 time=209ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=218ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=242ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=96ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=307ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=249ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=238ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=225ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=183ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=109ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=10ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=915ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=392ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=29ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=398ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=431ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=184ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=136ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=240ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=66ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=213ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=458ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=102ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=403ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=272ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=7ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=437ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=157ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=167ms TTL=64
+Reply from 192.168.31.9: bytes=32 time=416ms TTL=64
+
+Ping statistics for 192.168.31.9:
+    Packets: Sent = 30, Received = 30, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 7ms, Maximum = 915ms, Average = 250ms

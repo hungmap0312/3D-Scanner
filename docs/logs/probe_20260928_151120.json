@@ -1,0 +1,49 @@
+{
+  "started_at": "2026-09-28T15:11:20.167+07:00",
+  "host": "192.168.31.9",
+  "warmup": 2,
+  "samples_requested": 5,
+  "samples": [
+    {
+      "0x3500": 12544,
+      "0x350a": 128
+    },
+    {
+      "0x3500": 12544,
+      "0x350a": 128
+    },
+    {
+      "0x3500": 12544,
+      "0x350a": 128
+    },
+    {
+      "0x3500": 12544,
+      "0x350a": 128
+    },
+    {
+      "0x3500": 12544,
+      "0x350a": 128
+    }
+  ],
+  "ok": true,
+  "error": null,
+  "candidates": {
+    "aec_value": 783,
+    "aec_value_raw": 784,
+    "aec_value_effective": 783,
+    "aec_value_cap": 783,
+    "aec_value_clamped": true,
+    "median_0x3500": 12544,
+    "agc_gain": 8,
+    "median_0x350a": 128
+  },
+  "finished_at": "2026-09-28T15:11:26.617+07:00",
+  "auto_state": {
+    "aec": 1,
+    "agc": 1,
+    "awb": 1,
+    "awb_gain": 1,
+    "wb_mode": 0,
+    "0x3406": 0
+  }
+}

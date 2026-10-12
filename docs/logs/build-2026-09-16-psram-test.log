@@ -1,0 +1,17 @@
+# Build sketch thu PSRAM, chay trong moi truong tro ly ngay 2026-09-16.
+# Chi bien dich tren PC. KHONG nap len bo, KHONG do.
+
+$ arduino-cli compile --fqbn esp32:esp32:esp32s3:PSRAM=opi --warnings all firmware/esp32s3/PsramTest
+Sketch uses 280503 bytes (21%) of program storage space. Maximum is 1310720 bytes.
+Global variables use 22068 bytes (6%) of dynamic memory, leaving 305612 bytes for local variables. Maximum is 327680 bytes.
+exit code: 0
+
+# ---------------------------------------------------------------
+# Build lai sau khi xu ly review nhanh feat/psram-1mib-test:
+# mau lcg lay byte cao, them mau word chi so cho phep B, goi y menu.
+# Van chi bien dich tren PC.
+
+$ arduino-cli compile --fqbn esp32:esp32:esp32s3:PSRAM=opi --warnings all firmware/esp32s3/PsramTest
+Sketch uses 280983 bytes (21%) of program storage space. Maximum is 1310720 bytes.
+Global variables use 22068 bytes (6%) of dynamic memory, leaving 305612 bytes for local variables. Maximum is 327680 bytes.
+exit code: 0

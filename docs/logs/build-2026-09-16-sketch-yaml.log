@@ -1,0 +1,26 @@
+# Kiem chung sketch.yaml: build KHONG truyen --fqbn, arduino-cli phai tu lay
+# default_fqbn tu tep. Chay trong moi truong tro ly ngay 2026-09-16.
+# Chi bien dich tren PC. Arduino IDE co doc sketch.yaml hay khong: chua kiem.
+
+$ arduino-cli compile --warnings all firmware/esp32s3/PsramTest
+Sketch uses 280983 bytes (21%) of program storage space. Maximum is 1310720 bytes.
+Global variables use 22068 bytes (6%) of dynamic memory, leaving 305612 bytes for local variables. Maximum is 327680 bytes.
+exit code: 0
+build.options.json -> fqbn: esp32:esp32:esp32s3:PSRAM=opi
+build.options.json -> hardwareFolders: ...Arduino15/packages/esp32/hardware/esp32/3.3.11 (core toan cuc, khong tai moi)
+compile_commands.json -> co -DBOARD_HAS_PSRAM
+
+$ arduino-cli compile --warnings all firmware/esp32s3/CameraWebServerTest
+Sketch uses 1002426 bytes (76%) of program storage space. Maximum is 1310720 bytes.
+Global variables use 68000 bytes (20%) of dynamic memory, leaving 259680 bytes for local variables. Maximum is 327680 bytes.
+exit code: 0
+build.options.json -> fqbn: esp32:esp32:esp32s3:PSRAM=opi
+
+# Profile day du do --dump-profile sinh ra, KHONG dua vao sketch.yaml vi che do
+# profile tai core vao thu muc rieng; ghi lai de dung khi can ghim phien ban:
+profiles:
+  esp32s3:
+    fqbn: esp32:esp32:esp32s3:PSRAM=opi
+    platforms:
+      - platform: esp32:esp32 (3.3.11)
+        platform_index_url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json

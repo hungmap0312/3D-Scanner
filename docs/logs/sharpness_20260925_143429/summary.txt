@@ -1,0 +1,15 @@
+phien                           n kich_thuoc  lap_var_med  lap_var_min  lap_var_max grad_med   mean sat_max      mm/px  fov_w_mm
+--------------------------------------------------------------------------------------------------------------------------------
+capture_20260925_143009         5 640x480            0.9          0.8          0.9      12  177.1   0.000          -         -
+
+Phien capture_20260925_143009
+  thu muc      : D:\datascanner3d\raw\capture_20260925_143009
+  note         : C2 Vong 7, anh tham chieu tu dong sau probe
+  framesize    : VGA, anh 640x480, ROI x,y,w,h = 40,40,200,200
+  anh hop le   : 5 (bo 0 anh decode_ok=False theo frames.csv)
+  lap_var      : trung vi 0.9, min 0.8, max 0.9
+  grad_energy  : trung vi 12
+  do sang ROI  : mean 177.1, std 4.5; bao hoa toi da 0.000, toi toi da 0.000
+  mau RGB ROI  : mean R=174.3 G=178.6 B=177.1; spread kenh mau 2.4%; bao hoa/toi bat ky kenh (max) 0.000% / 0.000%
+  anh dai dien : img_0002.jpg
+  thuoc        : khong nhap, chua tinh mm/px

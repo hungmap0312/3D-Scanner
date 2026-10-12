@@ -1,0 +1,38 @@
+# test/test_ping_proto.c tren PC voi HAL gia, 2026-09-20, MinGW gcc 9.2.0
+== ping_proto.c tren PC voi HAL gia ==
+  PASS PING 1 -> PONG 1 <tick>
+  PASS ID? -> ID ...
+  PASS CRLF duoc chap nhan
+  PASS PING khong so -> ERR badarg
+  PASS PING x -> ERR badarg
+  PASS PING 12<space> -> ERR badarg
+  PASS lenh la -> ERR unknown
+  PASS dong rong -> im lang
+  PASS PING 0 -> PONG 0
+  PASS R07: PING 4294967295 (max) -> PONG
+  PASS R07: PING 4294967296 (max+1) -> ERR badarg (truoc: PONG 0)
+  PASS R07: PING 4294967299 (max+4) -> ERR badarg (truoc: PONG 3)
+  PASS R07: PING 4294967300 -> ERR badarg
+  PASS R07: 11 chu so -> ERR badarg
+  PASS hon 10 chu so ke ca so 0 dau -> ERR badarg
+  PASS dong 70 byte -> ERR toolong
+  PASS sau toolong nhan lenh moi binh thuong
+  PASS R08: 'PING 1' + loi UART + '2' -> ERR overrun (truoc: PONG 12)
+  PASS R08: sau ERR overrun nhan lenh moi dung
+  PASS R08: loi khi ring rong -> lenh ke tiep ERR overrun (bao thu)
+  PASS R08: roi lenh sau do lai dung
+  PASS R08: ring day dem 3 byte mat ('9', '2', LF)
+  PASS R08: chua co LF sau cho dut -> chua tra gi
+  PASS R08: dong ke tiep sau cho dut -> ERR overrun (truoc: PONG 12)
+  PASS R08: phuc hoi sau do
+  PASS R08: 'PING 7' truoc cho dut -> PONG 7; 'PING 8' ngay sau cho dut -> ERR overrun
+  PASS R08: lenh ke tiep dung
+  PASS R08: hai cho dut -> khong tra PONG 10/20, ring bi bo
+  PASS R08: dong ke tiep -> ERR overrun
+  PASS R08: roi phuc hoi
+  PASS arm trong ISR that bai -> RX khong con arm
+  PASS poll arm lai RX, dem rearm = 1
+  PASS sau arm lai, phan con lai cua dong van ghep dung (khong mat byte)
+  PASS poll binh thuong khong arm lai thua
+  PASS LED toggle dung khi tick cuon qua 0
+== 35 PASS, 0 FAIL ==

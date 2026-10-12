@@ -1,0 +1,73 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Build outputs; source and board configuration must remain tracked
+.pio/
+build/
+Debug/
+Release/
+
+# Local configuration with secrets
+.env
+.env.*
+!.env.example
+secrets.h
+secrets.json
+secrets.yaml
+
+# Large datasets: back these up outside Git
+/data/raw/**
+/data/processed/**
+
+# Bao cao do an (D026): giu ngoai Git theo nguoi dung 2026-09-20
+/report/
+
+# Editor/OS transient files
+.DS_Store
+Thumbs.db
+*.swp
+~$*
+
+# Local workspaces and collaboration files excluded from publication
+/.worktrees/
+/handoff/
+/.agents/
+/.claude/
+/.codex/
+/AGENTS.md
+/CLAUDE.md
+/GEMINI.md
+
+# Downloaded references and report-only material
+/docs/reference/du-an-tham-khao/
+/docs/reference/Báo_Cáo_Website_Nghe_Nhạc_Lê_Tuấn_Hưng_Đỗ_Xuân_Quang.docx
+/docs/reference/HUST_PPT_template_2022_RED_16x9.pptx
+/scripts/generate_diagrams.py
+/docs/figures/
+
+# Local markers, backups and measurements deferred by the user
+/docs/logs/.c5a_session_current
+/docs/logs/cam_*.json.bak
+/docs/logs/capture_fd5640_*
+/docs/logs/capture_p03_*
+/docs/logs/ping_*
+
+# Internal session records, decisions, reviews and agent handover transcripts
+/STATUS.md
+/DECISIONS.md
+/ENVIRONMENT.md
+/docs/SESSION_LOG.md
+/docs/archive/
+/docs/reviews/
+/docs/PROCESS.md
+/docs/CAMERA_REVIEW_*.md
+/docs/ENVIRONMENT_AUDIT_*.md
+/docs/logs/test-*.log
+/docs/logs/coder-*.log
+/docs/logs/**/t5-output*.md
+/docs/logs/**/ghi-nhan-nguoi-dung.md
+/docs/logs/**/terminal*.txt

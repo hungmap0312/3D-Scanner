@@ -1,0 +1,10 @@
+# sketch.yaml - cau hinh build nam trong repo, de menu Tools cua IDE khong
+# con la nguon duy nhat. arduino-cli doc default_fqbn khi khong truyen
+# --fqbn. Arduino IDE 2.x co doc tep nay hay khong: CHUA XAC NHAN, xem
+# STATUS.md.
+#
+# Gia tri khop menu Tools nguoi dung xac nhan ngay 2026-09-16, xem D008:
+# board ESP32S3 Dev Module, moi muc giu mac dinh, rieng PSRAM = OPI PSRAM.
+# Core da build dat: esp32:esp32 3.3.11, xem ENVIRONMENT.md.
+
+default_fqbn: esp32:esp32:esp32s3:PSRAM=opi

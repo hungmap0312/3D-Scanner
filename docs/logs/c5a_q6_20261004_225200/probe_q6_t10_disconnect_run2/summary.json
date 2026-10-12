@@ -1,0 +1,82 @@
+{
+  "verdict": "INVALID",
+  "host": "192.168.31.9",
+  "port": 80,
+  "requested_count": 30,
+  "total_sent": 5,
+  "success_count": 4,
+  "interval_sec": 0.5,
+  "per_request_deadline_sec": 10.0,
+  "start_time": "2026-10-04T23:13:27.489260",
+  "end_time": "2026-10-04T23:13:35.794083",
+  "commit_sha": null,
+  "build_sha": null,
+  "error": "Socket/Network error: [WinError 10065] A socket operation was attempted to an unreachable host",
+  "frames": [
+    {
+      "index": 1,
+      "status": 200,
+      "rtt_ms": 718.9999999973224,
+      "frame_id": 85,
+      "boot_id": "a37295f27df1a53a5b08d3d81544fb4b",
+      "t_frame_us": 2576665492,
+      "t_req_us": 2576658108,
+      "discarded": 1,
+      "body_len": 11575,
+      "error": null,
+      "valid": true
+    },
+    {
+      "index": 2,
+      "status": 200,
+      "rtt_ms": 4077.999999997701,
+      "frame_id": 86,
+      "boot_id": "a37295f27df1a53a5b08d3d81544fb4b",
+      "t_frame_us": 2578034152,
+      "t_req_us": 2577999007,
+      "discarded": 1,
+      "body_len": 11569,
+      "error": null,
+      "valid": true
+    },
+    {
+      "index": 3,
+      "status": 200,
+      "rtt_ms": 797.0000000022992,
+      "frame_id": 87,
+      "boot_id": "a37295f27df1a53a5b08d3d81544fb4b",
+      "t_frame_us": 2582536336,
+      "t_req_us": 2582501070,
+      "discarded": 1,
+      "body_len": 11554,
+      "error": null,
+      "valid": true
+    },
+    {
+      "index": 4,
+      "status": 200,
+      "rtt_ms": 610.0000000005821,
+      "frame_id": 88,
+      "boot_id": "a37295f27df1a53a5b08d3d81544fb4b",
+      "t_frame_us": 2583796945,
+      "t_req_us": 2583762859,
+      "discarded": 1,
+      "body_len": 11552,
+      "error": null,
+      "valid": true
+    },
+    {
+      "index": 5,
+      "status": null,
+      "rtt_ms": 30.999999999039574,
+      "frame_id": null,
+      "boot_id": null,
+      "t_frame_us": null,
+      "t_req_us": null,
+      "discarded": null,
+      "body_len": 0,
+      "error": "Socket/Network error: [WinError 10065] A socket operation was attempted to an unreachable host",
+      "valid": false
+    }
+  ]
+}

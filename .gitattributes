@@ -1,0 +1,12 @@
+* text=auto
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.jpg binary
+*.png binary
+*.docx binary
+*.xlsx binary
+*.webp binary
+# Ho so hieu chuan: giu nguyen tung byte vi SHA-256 duoc trich trong ho so (D053)
+data/calibration/** -text

@@ -1,0 +1,77 @@
+# Thu pc/capture_session.py voi server gia lap pc/mock_camera.py, KHONG co bo.
+# Chay trong moi truong tro ly ngay 2026-09-16. Chi chung minh luong script;
+# khong noi gi ve camera that.
+
+## selftest
+  verify_jpeg: JPEG 320x240 hop le                     OK
+  verify_jpeg: JPEG bi cat phai FAIL                   OK
+  verify_jpeg: cat giua + EOI gia (gioi han, khong chan) qua duoc
+  verify_jpeg: du lieu rac phai FAIL                   OK
+  verify_jpeg: PNG phai FAIL (khong bat dau bang SOI FF D8) OK
+  sha256: cung du lieu cung hash                       OK
+  sha256: khac du lieu khac hash                       OK
+  parse_x_timestamp: 12.345678 -> 12345 ms             OK
+  parse_x_timestamp: 7.000000 -> 7000 ms               OK
+  parse_x_timestamp: '7' -> 7000 ms                    OK
+  parse_x_timestamp: rong -> None                      OK
+  parse_x_timestamp: rac -> None                       OK
+  framesize: VGA = 10 = 640x480                        OK
+  framesize: SVGA = 11 = 800x600                       OK
+  framesize: QVGA = 6                                  OK
+  git_info: doc duoc commit 40 ky tu                   OK
+SELFTEST: PASS
+
+## Phien mock_vga: doi QVGA -> VGA, 5 anh, mong doi PASS
+Phien mock_vga tren 127.0.0.1:8081
+Nguon: 88d67f8c0dd7d91effdd365f77d19b22494ebe94 (feat/pc-capture-script, working tree BAN)
+Framesize: VGA, kich thuoc mong doi (640, 480)
+Ket qua: PASS
+  anh dat/yeu cau       : 5/5
+  tong so lan chup lai  : 0
+  loi ket noi           : 0
+  nghi reset (ts lui)   : 0
+  anh trung anh truoc   : 0
+  X-Timestamp trung     : 0
+  thoi gian phien       : 1.2 s
+  /capture ms min/tb/max: 18 / 27 / 35
+  /status doi start->end: {'framesize': [6, 10]}
+
+## Phien mock_reset2: mock gia reset o khung 3, warmup 0, mong doi FAIL vi nghi reset
+Phien mock_reset2 tren 127.0.0.1:8083
+Nguon: 88d67f8c0dd7d91effdd365f77d19b22494ebe94 (feat/pc-capture-script, working tree BAN)
+Framesize: giu nguyen tren bo, kich thuoc mong doi (320, 240)
+Ket qua: FAIL
+  anh dat/yeu cau       : 5/5
+  tong so lan chup lai  : 0
+  loi ket noi           : 0
+  nghi reset (ts lui)   : 1
+  anh trung anh truoc   : 0
+  X-Timestamp trung     : 0
+  thoi gian phien       : 1.2 s
+  /capture ms min/tb/max: 27 / 39 / 82
+  /status doi start->end: khong
+
+## Phien mock_metacopy: SVGA, 3 anh, thu --meta-copy
+Phien mock_metacopy tren 127.0.0.1:8084
+Nguon: 88d67f8c0dd7d91effdd365f77d19b22494ebe94 (feat/pc-capture-script, working tree BAN)
+Framesize: SVGA, kich thuoc mong doi (800, 600)
+Ket qua: PASS
+  anh dat/yeu cau       : 3/3
+  tong so lan chup lai  : 0
+  loi ket noi           : 0
+  nghi reset (ts lui)   : 0
+  anh trung anh truoc   : 0
+  X-Timestamp trung     : 0
+  thoi gian phien       : 0.6 s
+  /capture ms min/tb/max: 12 / 22 / 31
+  /status doi start->end: {'framesize': [6, 11]}
+
+## frames.csv cua mock_reset2 (khung 3 co co reset)
+idx,t_request,elapsed_ms,http_status,bytes,content_length_hdr,sha256_16,decode_ok,width,height,size_ok,x_timestamp,ts_ms,ts_delta_ms,identical_to_prev,retries,error
+1,2026-09-16T15:19:57.105+07:00,81.5,200,2165,2165,416ce44756743f7a,True,320,240,True,2.305249,2305,,False,0,
+2,2026-09-16T15:19:57.406+07:00,28.5,200,2193,2193,e2030d54e798b3ca,True,320,240,True,2.618673,2618,313,False,0,
+3,2026-09-16T15:19:57.707+07:00,29.0,200,2128,2128,da7baf16674f8943,True,320,240,True,0.000000,0,-2618,False,0,X-Timestamp lui: nghi reset
+4,2026-09-16T15:19:58.007+07:00,27.7,200,2276,2276,afd60a0e000d60c2,True,320,240,True,0.298790,298,298,False,0,
+5,2026-09-16T15:19:58.307+07:00,26.8,200,2290,2290,e54199bd6e0ca591,True,320,240,True,0.597256,597,299,False,0,
+
+## Chan ghi de: chay lai cung session-id -> exit 2, thong bao 'da ton tai, khong ghi de'

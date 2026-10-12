@@ -1,0 +1,1 @@
+﻿Luot RST 1 (probe_q6_t10_reboot_run1) INVALID truoc khi bam RST: mang Wi-Fi cham (request 1 RTT 5 s; request 2 nhan 9820/11172 byte trong 10 s). Chua bam RST. Bo khong reset (Boot e5ef0797).

@@ -1,0 +1,41 @@
+phien                           n kich_thuoc  lap_var_med  lap_var_min  lap_var_max grad_med   mean sat_max      mm/px  fov_w_mm
+--------------------------------------------------------------------------------------------------------------------------------
+capture_qh_200mm                5 640x480           10.3         10.2         10.5     525  142.2   0.000     0.2427     155.3
+capture_qh_250mm                5 640x480           13.9         13.6         14.5     781  152.3   0.000     0.3106     198.8
+capture_qh_350mm                5 640x480           46.4         42.1         48.8    1526  158.7   0.000     0.4405     281.9
+
+Phien capture_qh_200mm
+  thu muc      : D:\scanner3d\data\raw\capture_qh_200mm
+  note         : quang hoc 200 mm; hop 30x32x49 mm; thuoc dan mat truoc, vach 0 ben trai; den phong
+  framesize    : VGA, anh 640x480, ROI x,y,w,h = 255,0,120,395
+  anh hop le   : 5 (bo 0 anh decode_ok=False theo frames.csv)
+  lap_var      : trung vi 10.3, min 10.2, max 10.5
+  grad_energy  : trung vi 525
+  do sang ROI  : mean 142.2, std 38.7; bao hoa toi da 0.000, toi toi da 0.000
+  anh dai dien : img_0005.jpg
+  thuoc        : (328,46)-(328,169) = 123.6 px = 30.0 mm -> 0.2427 mm/px
+  truong nhin  : 155.3 x 116.5 mm o mat thuoc (gia dinh pixel vuong)
+
+Phien capture_qh_250mm
+  thu muc      : D:\scanner3d\data\raw\capture_qh_250mm
+  note         : quang hoc 250 mm; hop 30x32x49 mm; thuoc dan mat truoc, vach 0 ben trai; den phong
+  framesize    : VGA, anh 640x480, ROI x,y,w,h = 280,0,95,350
+  anh hop le   : 5 (bo 0 anh decode_ok=False theo frames.csv)
+  lap_var      : trung vi 13.9, min 13.6, max 14.5
+  grad_energy  : trung vi 781
+  do sang ROI  : mean 152.3, std 35.6; bao hoa toi da 0.000, toi toi da 0.000
+  anh dai dien : img_0001.jpg
+  thuoc        : (331,19)-(331,180) = 161.0 px = 50.0 mm -> 0.3106 mm/px
+  truong nhin  : 198.8 x 149.1 mm o mat thuoc (gia dinh pixel vuong)
+
+Phien capture_qh_350mm
+  thu muc      : D:\scanner3d\data\raw\capture_qh_350mm
+  note         : quang hoc 350 mm; hop 30x32x49 mm; thuoc dan mat truoc, vach 0 ben trai; den phong
+  framesize    : VGA, anh 640x480, ROI x,y,w,h = 297,0,71,312
+  anh hop le   : 5 (bo 0 anh decode_ok=False theo frames.csv)
+  lap_var      : trung vi 46.4, min 42.1, max 48.8
+  grad_energy  : trung vi 1526
+  do sang ROI  : mean 158.7, std 33.9; bao hoa toi da 0.000, toi toi da 0.000
+  anh dai dien : img_0002.jpg
+  thuoc        : (334,9)-(334,191) = 181.6 px = 80.0 mm -> 0.4405 mm/px
+  truong nhin  : 281.9 x 211.5 mm o mat thuoc (gia dinh pixel vuong)

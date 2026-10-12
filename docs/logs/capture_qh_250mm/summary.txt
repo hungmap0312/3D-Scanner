@@ -1,0 +1,13 @@
+Phien capture_qh_250mm tren 192.168.31.9
+Nguon: 9839263a194e55e31b11d9ba5f39524b3ce7c7ff (main, working tree sach)
+Framesize: VGA, kich thuoc mong doi (640, 480)
+Ket qua: PASS
+  anh dat/yeu cau       : 5/5
+  tong so lan chup lai  : 0
+  loi ket noi           : 0
+  nghi reset (ts lui)   : 0
+  anh trung anh truoc   : 0
+  X-Timestamp trung     : 0
+  thoi gian phien       : 12.6 s
+  /capture ms min/tb/max: 246 / 525 / 852
+  /status doi start->end: {'0x3400': [1362, 1370], '0x3404': [1680, 1690]}

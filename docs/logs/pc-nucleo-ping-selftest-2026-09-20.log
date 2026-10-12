@@ -1,0 +1,23 @@
+# nucleo_ping.py --selftest, 2026-09-20, nhanh fix/capture-session-r02-r05 (R06)
+PASS 100 PING dung thu tu -> count_ok 100, khong loi
+PASS ghi nhan dong ID
+PASS dong BOOT truoc phien duoc rut ra
+PASS uptime dau < uptime cuoi
+PASS 100 dong pairs, tat ca ok
+PASS bo CR khi bo tra CRLF
+PASS sai thu tu o 37 -> dung tai 37, count_ok 36
+PASS khong tra loi o 3 -> timeout, count_ok 2
+PASS dong la o 5 -> bad_reply, count_ok 4
+PASS khong co ID -> dung truoc khi PING
+PASS OSError o PING 3 -> aborted io_error, giu 2 PONG
+PASS Ctrl+C o PING 4 -> aborted user_interrupt, giu 3 PONG
+PASS open_session_dir tao thu muc + session.json truoc khi giao tiep
+PASS open_session_dir tu choi thu muc da co
+PASS pairs.csv ghi dan: 2 cap con tren dia sau loi I/O
+PASS summary sau loi I/O la FAIL kem diem mat lien lac
+PASS parse_pong hop le
+PASS parse_pong tu choi thieu truong
+PASS parse_pong tu choi chu
+PASS summary co PASS
+PASS summary co FAIL kem ly do
+SELFTEST PASS

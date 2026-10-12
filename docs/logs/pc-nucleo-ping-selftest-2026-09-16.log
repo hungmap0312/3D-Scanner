@@ -1,0 +1,26 @@
+# pc/nucleo_ping.py --selftest, 2026-09-16, moi truong tro ly, .venv Python 3.11.9, pyserial 3.5. KHONG co bo Nucleo.
+# Lenh: .venv/Scripts/python.exe pc/nucleo_ping.py --selftest
+PASS 100 PING dung thu tu -> count_ok 100, khong loi
+PASS ghi nhan dong ID
+PASS dong BOOT truoc phien duoc rut ra
+PASS uptime dau < uptime cuoi
+PASS 100 dong pairs, tat ca ok
+PASS bo CR khi bo tra CRLF
+PASS sai thu tu o 37 -> dung tai 37, count_ok 36
+PASS khong tra loi o 3 -> timeout, count_ok 2
+PASS dong la o 5 -> bad_reply, count_ok 4
+PASS khong co ID -> dung truoc khi PING
+PASS parse_pong hop le
+PASS parse_pong tu choi thieu truong
+PASS parse_pong tu choi chu
+PASS summary co PASS
+PASS summary co FAIL kem ly do
+SELFTEST PASS
+exit=0
+
+# Cong COM dang co tren may luc nay (chua cam Nucleo):
+# Lenh: .venv/Scripts/python.exe -m serial.tools.list_ports -v
+1 ports found
+COM9                
+    desc: USB-Enhanced-SERIAL CH343 (COM9)
+    hwid: USB VID:PID=1A86:55D3 SER=5C85075535 LOCATION=1-2

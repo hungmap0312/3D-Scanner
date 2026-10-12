@@ -1,0 +1,41 @@
+# Tester (Claude Code) — kiem buoc I (verified) va J (sao luu) C2 — 2026-09-27T15:34:51+07:00
+# nhanh feat/c2-camera-profile HEAD 560eaf916b85de13f4f0e51a167b7348dcebbf4b
+
+## I — bon ho so: hash hien tai, .bak, validate_profile, verified
+cam_VGA_q10_20260925_r01
+  truoc (.bak) sha256 0f57d9657ac9f8ed4c285baff7c1411ecee5bbe9abc2868658bf9d97618d9a5d
+  sau   (hien) sha256 ed43061712201c57ec9a35eab893d22511557e4f76f2f8e8b422a99a1870d1dd
+  validate_profile True [] | chi verified doi True
+  verified {'session_id': 'capture_20260927_151514', 'mean_drift_pct': 0.105, 'registers_stable': True}
+cam_VGA_q20_20260927
+  truoc (.bak) sha256 5ddb571ed5a4de169ecfc5a560e3a09cfc90e17949caaee5d5799b3647a3616f
+  sau   (hien) sha256 cbb1384d8b0c652945208b6f2789f6c6b32e377e1522ad50edc88f5888a4d0b1
+  validate_profile True [] | chi verified doi True
+  verified {'session_id': 'capture_20260927_150208', 'mean_drift_pct': 0.282, 'registers_stable': True}
+cam_SVGA_q10_20260927
+  truoc (.bak) sha256 494f89aae0d3f6b512e6e18a0a78e63bdb075f2b2783c42cd6cd38525d384121
+  sau   (hien) sha256 2cc6fb3514353c101a13cb5148863911b960416aba0c7ff45dd969470833ab71
+  validate_profile True [] | chi verified doi True
+  verified {'session_id': 'capture_20260927_150505', 'mean_drift_pct': 0.122, 'registers_stable': True}
+cam_SVGA_q20_20260927
+  truoc (.bak) sha256 4b4fc1dbae0b1abfed1bd4208f18661ae0405dd076297afdb40c68a3883265c0
+  sau   (hien) sha256 828f4defe870b9fb5c715196732560445ace181215b116c6d4c553e8db5e12f1
+  validate_profile True [] | chi verified doi True
+  verified {'session_id': 'capture_20260927_150719', 'mean_drift_pct': 0.266, 'registers_stable': True}
+
+## I — --verify tren bo (nguoi dung chay 27/09, nguyen van gui lai)
+Ho so khop bo: cam_VGA_q10_20260925_r01
+Ho so khop bo: cam_VGA_q20_20260927
+Ho so khop bo: cam_SVGA_q10_20260927
+Ho so khop bo: cam_SVGA_q20_20260927
+
+## J — ban sao thu hai: /c/Users/bestp/OneDrive/backup_scanner3d_20260927 (OneDrive, dong bo len may chu)
+C: va D: cung o vat ly (Get-Partition DiskNumber 0) nen KHONG dung C: lam ban sao; OneDrive la ban sao ngoai may.
+so tep raw goc/ban sao: 347 / 347
+so ho so goc/ban sao: 12 / 12
+sha256 hash_raw.txt: 55185ded32ca4e1e614f8a6f0fa13bb9a74b40c276e59251ed014fe2179f49ac
+Tester doi chieu lai: RAW khop
+Tester doi chieu lai: HO SO khop
+
+## pham vi toan nhanh b784159..HEAD
+180

@@ -1,0 +1,40 @@
+{
+  "camera_profile_id": "cam_SVGA_q10_20260927",
+  "created_at": "2026-09-27T15:03:33.444+07:00",
+  "source": {
+    "commit": "1f0c265b75f33bdffa378c79b95cd657745ef994",
+    "branch": "feat/c2-camera-profile",
+    "dirty": false
+  },
+  "board": "ESP32-S3 N16R8",
+  "sensor": "OV3660 PID 0x3660",
+  "framesize": "SVGA",
+  "quality": 10,
+  "controls": {
+    "aec": 0,
+    "agc": 0,
+    "awb": 1,
+    "brightness": 1,
+    "contrast": 0,
+    "saturation": -2,
+    "hmirror": 0,
+    "vflip": 1,
+    "lenc": 1,
+    "dcw": 1,
+    "aec_value": 783,
+    "agc_gain": 7,
+    "awb_gain": 1,
+    "wb_mode": 2
+  },
+  "expected_registers": {
+    "0x3500": 12528,
+    "0x350a": 111,
+    "0x3400": 1616,
+    "0x3404": 1264,
+    "0x3402": 1040,
+    "0x3406": 1,
+    "0x3503": 3
+  },
+  "lens_note": "ong kinh goc, tieu diem xa",
+  "verified": {"session_id": "capture_20260927_150505", "mean_drift_pct": 0.122, "registers_stable": true}
+}

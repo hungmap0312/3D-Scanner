@@ -1,0 +1,43 @@
+  metrics: anh phang cho lap_var = grad_energy = 0             OK
+  metrics: anh phang mean 128, std 0                           OK
+  metrics: anh trang sat_frac = 1                              OK
+  metrics: anh den dark_frac = 1                               OK
+  blur: lap_var giam don dieu qua radius 0,1,2,4 (108978 > 667 > 12 > 2) OK
+  blur: grad_energy giam don dieu qua radius 0,1,2,4           OK
+  stripes: anh net lap_var > 2x anh mo (15950 vs 164)          OK
+  jpeg: sau nen JPEG anh net van > anh mo                      OK
+  parse_roi: '10,20,30,40' -> khong ID                         OK
+  parse_roi: 'capture_x=10,20,30,40' -> co ID                  OK
+  parse_roi: center -> 160,120,320,240 tren VGA                OK
+  parse_roi: 'capture_x=center'                                OK
+  resolve_roi: None -> toan khung                              OK
+  parse_roi: '1,2,3' bao loi dung                              OK
+  parse_roi: 'a,b,c,d' bao loi dung                            OK
+  parse_roi: '0,0,2,2' bao loi dung                            OK
+  parse_roi: '-1,0,10,10' bao loi dung                         OK
+  parse_roi: '=1,2,3,4' bao loi dung                           OK
+  resolve_roi: vuot khung bao loi dung                         OK
+  crop_roi: (10,5,30,20) -> mang 20x30                         OK
+  parse_ruler: 3-4-5 -> 500 px, 0.1 mm/px                      OK
+  parse_ruler: co ID= -> key va 0.2 mm/px                      OK
+  parse_ruler: '1,2,3,4' bao loi dung                          OK
+  parse_ruler: '0,0,10,10,0' bao loi dung                      OK
+  parse_ruler: '5,5,5,5,10' bao loi dung                       OK
+  parse_ruler: '=1,2,3,4,5' bao loi dung                       OK
+  parse_ruler: 'a,b,c,d,e' bao loi dung                        OK
+  fov_mm: 0.25 mm/px tren VGA -> 160 x 120 mm                  OK
+  analyze_session: bo anh decode_ok=False, con idx 1 va 3      OK
+  analyze_session: doc framesize va note tu session.json       OK
+  analyze_session: anh net (idx 1) > anh mo (idx 3)            OK
+  analyze_session: ROI center tren 320x240 = 80,60,160,120     OK
+  analyze_session: thuoc 320 px = 64 mm -> FOV 64 x 48 mm      OK
+  analyze_session: chon duoc anh dai dien                      OK
+  write_report: ba tep ho so co mat                            OK
+  write_report: per_image.csv co 2 dong                        OK
+  annotate: JPEG 320x240 co ve ROI va thuoc                    OK
+  write_report: summary.txt co ten phien va cot mm/px          OK
+  write_report: summary.txt dung LF, ket thuc bang dung mot LF OK
+  write_report: summary.json dung LF, ket thuc bang dung mot LF OK
+  write_report: thu muc da co -> FileExistsError, khong ghi de OK
+  git_info: doc duoc commit 40 ky tu                           OK
+SELFTEST: PASS

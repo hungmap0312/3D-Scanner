@@ -1,0 +1,13 @@
+Phien capture_20260916_154847 tren 192.168.31.9
+Nguon: faa79dcbd88688031a4f814e74c48f5ed9ef2ca6 (feat/quy-tac-huong-dan, working tree sach)
+Framesize: VGA, kich thuoc mong doi (640, 480)
+Ket qua: PASS
+  anh dat/yeu cau       : 100/100
+  tong so lan chup lai  : 0
+  loi ket noi           : 0
+  nghi reset (ts lui)   : 0
+  anh trung anh truoc   : 0
+  X-Timestamp trung     : 0
+  thoi gian phien       : 1188.5 s
+  /capture ms min/tb/max: 90 / 431 / 1676
+  /status doi start->end: {'0x3404': [1809, 1531], '0x3400': [1525, 1447], '0x350a': [248, 184], 'framesize': [6, 10], '0x5585': [15, 58]}

@@ -1,0 +1,56 @@
+{
+  "report_id": "sharpness_20260925_143429",
+  "created_at": "2026-09-25T14:34:29.703+07:00",
+  "script": "pc/sharpness.py",
+  "source": {
+    "commit": "af4c071da415b413ae8fb0cb774f7959fe944941",
+    "branch": "feat/c2-camera-profile",
+    "dirty": false
+  },
+  "args": {
+    "roi": [
+      "40,40,200,200"
+    ],
+    "ruler": [],
+    "sessions": [
+      "capture_20260925_143009"
+    ]
+  },
+  "sessions": [
+    {
+      "session_id": "capture_20260925_143009",
+      "dir": "D:\\datascanner3d\\raw\\capture_20260925_143009",
+      "framesize": "VGA",
+      "note": "C2 Vong 7, anh tham chieu tu dong sau probe",
+      "capture_commit": "af4c071da415b413ae8fb0cb774f7959fe944941",
+      "started_at": "2026-09-25T14:30:09.156+07:00",
+      "verdict": "PASS",
+      "skipped_decode_fail": 0,
+      "n_images": 5,
+      "width": 640,
+      "height": 480,
+      "roi": [
+        40,
+        40,
+        200,
+        200
+      ],
+      "lap_var_median": 0.876007544394235,
+      "lap_var_min": 0.801448808328904,
+      "lap_var_max": 0.9071522897539414,
+      "grad_energy_median": 12.1238649117437,
+      "mean_median": 177.1044,
+      "std_median": 4.495491492595665,
+      "sat_frac_max": 0.0,
+      "dark_frac_max": 0.0,
+      "mean_r_median": 174.3296,
+      "mean_g_median": 178.5868,
+      "mean_b_median": 177.1172,
+      "channel_spread_pct_median": 2.3994538049662606,
+      "dark_frac_rgb_max": 0.0,
+      "sat_frac_rgb_max": 0.0,
+      "representative": "img_0002.jpg",
+      "ruler": null
+    }
+  ]
+}

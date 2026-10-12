@@ -1,0 +1,32 @@
+# Tester Vong 8 - H1 do be rong mep khoi go (mep trai, giay->go), dot 20260928_1117, 2026-09-28 15:51
+# VGA --edge 380,255,370 ; SVGA --edge 475,320,462 (mep o x~381 VGA / x~477 SVGA, ti le 1.252 = 800/640)
+
+$ .venv/Scripts/python.exe pc/ruler_ticks.py capture_20260928_152150 --edge 380,255,370
+Phien capture_20260928_152150: 5 anh 640x480
+  be rong mep tung anh  : 1.58, 1.53, 1.53, 1.57, 1.59 px
+  be rong mep trung vi  : 1.57 px
+
+$ .venv/Scripts/python.exe pc/ruler_ticks.py capture_20260928_153631 --edge 380,255,370
+Phien capture_20260928_153631: 5 anh 640x480
+  be rong mep tung anh  : 2.12, 1.94, 1.94, 1.94, 2.04 px
+  be rong mep trung vi  : 1.94 px
+
+$ .venv/Scripts/python.exe pc/ruler_ticks.py capture_20260928_153742 --edge 475,320,462
+Phien capture_20260928_153742: 5 anh 800x600
+  be rong mep tung anh  : 1.97, 1.97, 2.01, 2.03, 1.96 px
+  be rong mep trung vi  : 1.97 px
+
+$ .venv/Scripts/python.exe pc/ruler_ticks.py capture_20260928_153824 --edge 475,320,462
+Phien capture_20260928_153824: 5 anh 800x600
+  be rong mep tung anh  : 2.00, 2.12, 2.00, 2.07, 2.10 px
+  be rong mep trung vi  : 2.07 px
+
+$ .venv/Scripts/python.exe pc/ruler_ticks.py capture_20260928_154022 --edge 380,255,370
+Phien capture_20260928_154022: 5 anh 640x480
+  be rong mep tung anh  : 1.58, 1.63, 1.70, 1.69, 1.70 px
+  be rong mep trung vi  : 1.69 px
+
+$ .venv/Scripts/python.exe pc/ruler_ticks.py capture_20260928_154135 --edge 380,255,370
+Phien capture_20260928_154135: 5 anh 640x480
+  be rong mep tung anh  : 3.32, 3.22, 3.20, 3.12, 3.21 px
+  be rong mep trung vi  : 3.21 px

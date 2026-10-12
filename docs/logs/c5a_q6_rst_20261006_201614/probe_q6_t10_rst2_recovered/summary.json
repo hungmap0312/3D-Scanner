@@ -1,0 +1,30 @@
+{
+  "verdict": "PASS",
+  "host": "192.168.31.9",
+  "port": 80,
+  "requested_count": 1,
+  "total_sent": 1,
+  "success_count": 1,
+  "interval_sec": 0.2,
+  "per_request_deadline_sec": 10.0,
+  "start_time": "2026-10-06T20:37:55.816068",
+  "end_time": "2026-10-06T20:37:56.192207",
+  "commit_sha": null,
+  "build_sha": null,
+  "error": null,
+  "frames": [
+    {
+      "index": 1,
+      "status": 200,
+      "rtt_ms": 358.99999999946886,
+      "frame_id": 1,
+      "boot_id": "d84c70cd847a3c9a00fcafad29f840d2",
+      "t_frame_us": 70091778,
+      "t_req_us": 70060749,
+      "discarded": 1,
+      "body_len": 11535,
+      "error": null,
+      "valid": true
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Content-Type: image/jpeg
+Content-Length: 11509
+Content-Disposition: inline; filename=capture_fresh.jpg
+Access-Control-Allow-Origin: *
+X-Frame-Id: 1
+X-Boot-Id: 45420c1c2716a32e9f4c771696d99ce0
+X-Timestamp: 92.674802
+X-Request-Timestamp: 92.650577
+X-Discarded-Frames: 1

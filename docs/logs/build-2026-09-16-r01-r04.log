@@ -1,0 +1,57 @@
+# Build kiem tra sau khi sua R01-R04, chay trong moi truong tro ly.
+# Chi bien dich tren PC. KHONG nap len bo, KHONG do phan cung.
+# Ngay: 2026-09-16
+
+$ arduino-cli version
+arduino-cli  Version: 1.5.1 Commit: 01f3d4f2b Date: 2026-06-05T10:22:12Z
+
+$ arduino-cli core list  (loc esp32)
+ID                       Installed        Latest           Name
+esp32:esp32              3.3.11           3.3.11           esp32
+
+$ arduino-cli compile --fqbn esp32:esp32:esp32s3:PSRAM=opi --warnings all firmware/esp32s3/CameraWebServerTest
+Sketch uses 1002278 bytes (76%) of program storage space. Maximum is 1310720 bytes.
+Global variables use 68000 bytes (20%) of dynamic memory, leaving 259680 bytes for local variables. Maximum is 327680 bytes.
+exit code: 0
+
+# Bang phan vung that su duoc sinh ra, giai ma tu
+# CameraWebServerTest.ino.partitions.bin bang gen_esp32part.py cua core 3.3.11:
+Parsing binary partition input...
+Verifying table...
+# ESP-IDF Partition Table
+# Name, Type, SubType, Offset, Size, Flags
+nvs,data,nvs,0x9000,20K,
+otadata,data,ota,0xe000,8K,
+app0,app,ota_0,0x10000,3840K,
+fr,data,undefined,0x3d0000,128K,
+coredump,data,coredump,0x3f0000,64K,
+
+# Kiem chung rieng cho R02: so canh bao dinh dang truoc va sau khi sua.
+# Doan toi thieu, cung compiler ESP32-S3 ma bien ban 15/09 da dung.
+
+$ xtensa-esp32s3-elf-g++ -x c++ -fsyntax-only -Wformat=2 fmt_old.cpp   # dinh dang cu
+fmt_old.cpp -> fmt_old.cpp: In function 'void check(size_t, timeval)':
+fmt_old.cpp -> fmt_old.cpp:6:85: warning: format '%d' expects argument of type 'int', but argument 5 has type 'time_t' {aka 'long long int'} [-Wformat=]
+    6 |   snprintf(b, 128, "Content-Type: image/jpeg\r\nContent-Length: %u\r\nX-Timestamp: %d.%06d\r\n\r\n", jpg_len, ts.tv_sec, ts.tv_usec);
+      |                                                                                    ~^                         ~~~~~~~~~
+      |                                                                                     |                            |
+      |                                                                                     int                          time_t {aka long long int}
+      |                                                                                    %lld
+fmt_old.cpp -> fmt_old.cpp:6:90: warning: format '%d' expects argument of type 'int', but argument 6 has type 'suseconds_t' {aka 'long int'} [-Wformat=]
+    6 |   snprintf(b, 128, "Content-Type: image/jpeg\r\nContent-Length: %u\r\nX-Timestamp: %d.%06d\r\n\r\n", jpg_len, ts.tv_sec, ts.tv_usec);
+      |                                                                                       ~~~^                               ~~~~~~~~~~
+      |                                                                                          |                                  |
+      |                                                                                          int                                suseconds_t {aka long int}
+      |                                                                                       %06ld
+
+$ xtensa-esp32s3-elf-g++ -x c++ -fsyntax-only -Wformat=2 fmt_new.cpp   # dinh dang moi
+(khong co dau ra = khong con canh bao)
+
+# ---------------------------------------------------------------
+# Build lai sau khi sua loi thu lai Wi-Fi ma bo lo ra ngay 16/09
+# (WiFi.disconnect truoc WiFi.begin). Van chi bien dich tren PC.
+
+$ arduino-cli compile --fqbn esp32:esp32:esp32s3:PSRAM=opi --warnings all firmware/esp32s3/CameraWebServerTest
+Sketch uses 1002406 bytes (76%) of program storage space. Maximum is 1310720 bytes.
+Global variables use 68000 bytes (20%) of dynamic memory, leaving 259680 bytes for local variables. Maximum is 327680 bytes.
+exit code: 0

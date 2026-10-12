@@ -1,0 +1,44 @@
+{
+  "session_id": "capture_20260927_150719",
+  "n_images": 5,
+  "width": 800,
+  "height": 600,
+  "band": null,
+  "lag": [
+    15,
+    70
+  ],
+  "edge": [
+    485,
+    325,
+    425
+  ],
+  "images": [
+    {
+      "edge_rows_used": 100,
+      "edge_width_px_median": 3.07,
+      "file": "img_0001.jpg"
+    },
+    {
+      "edge_rows_used": 100,
+      "edge_width_px_median": 2.84,
+      "file": "img_0002.jpg"
+    },
+    {
+      "edge_rows_used": 100,
+      "edge_width_px_median": 3.34,
+      "file": "img_0003.jpg"
+    },
+    {
+      "edge_rows_used": 100,
+      "edge_width_px_median": 2.81,
+      "file": "img_0004.jpg"
+    },
+    {
+      "edge_rows_used": 100,
+      "edge_width_px_median": 3.04,
+      "file": "img_0005.jpg"
+    }
+  ],
+  "edge_width_px_median": 3.04
+}

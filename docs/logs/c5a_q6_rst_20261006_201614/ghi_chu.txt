@@ -1,0 +1,7 @@
+Cổng COM: COM9
+IP: 192.168.31.9
+đo bằng PowerShell
+lần 1 bấm RST sau dòng [3/15]
+lần 2 bấm RST sau dòng [3/15]
+lần 3 bấm RST sau dòng [4/15]
+ánh sáng: ban đêm, bật 2 đèn trần dạng ống tuýp, ổn định không thay đổi độ sáng trong suốt quá trình đo

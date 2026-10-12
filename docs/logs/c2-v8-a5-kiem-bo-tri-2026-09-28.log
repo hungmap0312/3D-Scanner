@@ -1,0 +1,218 @@
+# Tester Vong 8 - kiem A5/A6 lan 1, dot 20260928_1117, 2026-09-28 11:45
+# Chi doc. Khong sua, khong khoi phuc, khong xoa tep nao.
+
+== Phien A5 ngay 28/09 ==
+$ ls -d data/raw/capture_20260928_* docs/logs/capture_20260928_*
+data/raw/capture_20260928_113005
+docs/logs/capture_20260928_112715
+docs/logs/capture_20260928_113005
+
+== Phien 112715: meta con, raw KHONG con trong data/raw -> tim thay trong Thung rac o D: ==
+$ (ban ghi $I trong Thung rac: gio xoa, duong dan goc)
+2026-09-28 11:29:54  $INLVL13  D:\datascanner3d\raw\capture_20260928_112715
+$ ls -l <Thung rac>/$RNLVL13
+total 39
+-rw-r--r-- 1 bestp 197609   242 Sep 28 11:27 attempts.jsonl
+-rw-r--r-- 1 bestp 197609   306 Sep 28 11:27 frames.csv
+-rw-r--r-- 1 bestp 197609 10041 Sep 28 11:27 img_0001.jpg
+-rw-r--r-- 1 bestp 197609 10488 Sep 28 11:27 session.json
+-rw-r--r-- 1 bestp 197609   936 Sep 28 11:27 status_after_set.json
+-rw-r--r-- 1 bestp 197609   936 Sep 28 11:27 status_end.json
+-rw-r--r-- 1 bestp 197609   935 Sep 28 11:27 status_start.json
+-rw-r--r-- 1 bestp 197609   643 Sep 28 11:27 summary.txt
+sha256_16 img_0001.jpg trong Thung rac: caeec534cf1dfee8  | frames.csv (meta) ghi: caeec534cf1dfee8
+session.json: ban Thung rac = ban meta
+summary.txt: ban Thung rac = ban meta
+frames.csv: ban Thung rac = ban meta
+attempts.jsonl: ban Thung rac = ban meta
+status_start.json: ban Thung rac = ban meta
+status_end.json: ban Thung rac = ban meta
+status_after_set.json: ban Thung rac = ban meta
+
+== Tom tat hai phien ==
+Phien capture_20260928_112715 tren 192.168.31.9
+Ket qua: PASS
+  /status doi start->end: DOI o 4/76 truong: {'0x3400': [1948, 1942], '0x3404': [1204, 1199], '0x5585': [55, 56], 'framesize': [6, 10]}
+Phien capture_20260928_113005 tren 192.168.31.9
+Ket qua: PASS
+  /status doi start->end: DOI o 2/76 truong: {'0x3400': [1941, 1935], '0x3404': [1199, 1207]}
+
+== Anh A5 capture_20260928_113005: do sang (xam) ==
+giay trai, luoi 3x3 (x20..360, y20..420):
+   [153.8, 163.8, 165.7]
+   [159.1, 168.9, 171.7]
+   [166.1, 175.6, 181.2]
+bien giay -> thuoc/khoi, cac cot x=370..406 buoc 4:
+  y=60 [162.0, 162.0, 168.0, 180.0, 162.0, 156.0, 154.0, 154.0, 154.0, 154.0]
+  y=160 [164.0, 164.0, 178.0, 184.0, 155.0, 153.0, 152.0, 152.0, 152.0, 152.0]
+  y=260 [168.0, 168.0, 171.0, 166.0, 118.0, 119.0, 118.0, 116.0, 106.0, 118.0]
+  y=340 [174.0, 174.0, 172.0, 166.0, 130.0, 121.0, 122.0, 123.0, 124.0, 128.0]
+  y=380 [176.0, 174.0, 170.0, 160.0, 120.0, 111.0, 112.0, 116.0, 119.0, 122.0]
+  y=420 [172.0, 171.0, 168.0, 158.0, 124.0, 132.0, 132.0, 132.0, 137.0, 139.0]
+doc x=560 (mat khoi, ngoai thuoc) y300..450 buoc 10: [130.0, 128.0, 121.0, 130.0, 206.0, 204.0, 224.0, 230.0, 218.0, 157.0, 139.0, 137.0, 140.0, 140.0, 138.0, 210.0]
+
+== Lan kiem 2, 2026-09-28 12:05 ==
+$ ls data/raw/capture_20260928_112715/ ; sha256_16 img_0001.jpg   (nguoi dung khoi phuc tu Thung rac, so ghi 11:50)
+attempts.jsonl frames.csv img_0001.jpg session.json status_after_set.json status_end.json status_start.json summary.txt
+caeec534cf1dfee8
+Phien capture_20260928_120001 tren 192.168.31.9
+Ket qua: PASS
+  /status doi start->end: DOI o 2/76 truong: {'0x3400': [1912, 1925], '0x3404': [1210, 1205]}
+anh 120001: thuoc dung x~315..380 tren giay, khoi go x~383..472 y~237..385
+mep trai khoi (thuoc|khoi), x=360..404 buoc 4:
+  y=260 [161.0, 161.0, 162.0, 183.0, 193.0, 204.0, 127.0, 133.0, 132.0, 130.0, 113.0, 123.0]
+  y=300 [166.0, 166.0, 168.0, 183.0, 206.0, 222.0, 125.0, 133.0, 135.0, 133.0, 136.0, 135.0]
+  y=340 [171.0, 171.0, 168.0, 177.0, 180.0, 181.0, 119.0, 126.0, 125.0, 125.0, 124.0, 126.0]
+  y=370 [173.0, 174.0, 167.0, 174.0, 178.0, 166.0, 128.0, 128.0, 129.0, 129.0, 129.0, 132.0]
+mep phai khoi (khoi|tuong), x=452..496 buoc 4:
+  y=250 [134.0, 136.0, 133.0, 131.0, 146.0, 153.0, 144.0, 144.0, 144.0, 143.0, 143.0, 142.0]
+  y=270 [134.0, 132.0, 132.0, 130.0, 135.0, 161.0, 142.0, 140.0, 140.0, 142.0, 140.0, 139.0]
+  y=290 [133.0, 131.0, 131.0, 130.0, 132.0, 157.0, 138.0, 139.0, 139.0, 136.0, 136.0, 136.0]
+  y=310 [132.0, 132.0, 132.0, 132.0, 132.0, 161.0, 138.0, 133.0, 133.0, 133.0, 133.0, 133.0]
+giay luoi 3x3 (x10..300,y20..420):
+   [157.3, 164.2, 164.6]
+   [163.8, 170.3, 172.3]
+   [171.7, 178.3, 181.8]
+Nhan xet Tester: thuoc dung sat mep trai khoi go (vien sang 183-222 cua thuoc ngay truoc buoc giam xuong ~127);
+mep phai khoi go chi lech ~8 muc xam so voi tuong (132 vs 140) kem vien sang 161 -> khong mep doc nao sach cho H1.
+Vet sang cheo goc duoi-phai (x~475..640, y~380..480) che mat truoc tam de; nghi la thuoc 30 cm con nam tren ban - cho nguoi dung xac nhan.
+
+== Lan kiem 3, 2026-09-28 12:31 ==
+Phien capture_20260928_122446 tren 192.168.31.9
+Ket qua: PASS
+  /status doi start->end: DOI o 3/76 truong: {'0x3400': [1893, 1892], '0x3404': [1244, 1240], '0x5585': [52, 53]}
+anh 122446: thuoc dung x~275..335 tren giay; giay trang x~336..382; khoi go tu x~383
+  y=260 x320..404/4: [162.0, 162.0, 164.0, 169.0, 180.0, 184.0, 178.0, 178.0, 177.0, 175.0, 173.0, 173.0, 173.0, 176.0, 186.0, 196.0, 125.0, 129.0, 130.0, 126.0, 111.0, 121.0]
+  y=300 x320..404/4: [166.0, 167.0, 171.0, 173.0, 182.0, 186.0, 182.0, 182.0, 180.0, 179.0, 176.0, 176.0, 174.0, 175.0, 194.0, 211.0, 121.0, 129.0, 130.0, 130.0, 132.0, 132.0]
+  y=340 x320..404/4: [169.0, 169.0, 171.0, 170.0, 180.0, 187.0, 186.0, 186.0, 184.0, 183.0, 180.0, 178.0, 174.0, 174.0, 174.0, 178.0, 115.0, 122.0, 120.0, 120.0, 119.0, 120.0]
+  y=370 x320..404/4: [173.0, 173.0, 173.0, 170.0, 176.0, 187.0, 185.0, 184.0, 182.0, 182.0, 182.0, 179.0, 177.0, 175.0, 175.0, 165.0, 128.0, 128.0, 127.0, 127.0, 128.0, 128.0]
+  goc duoi phai x480..640 y380..470 TB: 164.1 (mat truoc tam de, khong con vet cheo)
+Nhan xet Tester: A5 122446 DAT 5 diem. Khe giay giua thuoc va khoi ~47 px (~1,5 cm), cua so H1 +-20 px quanh x~383 khong chua mep thuoc.
+
+== Anh dien thoai (goc, EXIF) ==
+20260928_113212.jpg (4032, 3024) samsung SM-N975U1 DTO 2026:09:28 11:32:12 sha256 6338b4bfcb8ac6fd 3279309
+20260928_113217.jpg (4032, 3024) samsung SM-N975U1 DTO 2026:09:28 11:32:17 sha256 d6881e12563d610c 6521997
+20260928_113222.jpg (4032, 3024) samsung SM-N975U1 DTO 2026:09:28 11:32:22 sha256 5d29b144788d2047 2948019
+20260928_113226.jpg (4032, 3024) samsung SM-N975U1 DTO 2026:09:28 11:32:26 sha256 6437d9b15908edbf 3081009
+20260928_113407.jpg (4032, 3024) samsung SM-N975U1 DTO 2026:09:28 11:34:07 sha256 6ab5b132598018d1 6430057
+20260928_113411.jpg (4032, 3024) samsung SM-N975U1 DTO 2026:09:28 11:34:11 sha256 2648ead5c5466406 6960453
+20260928_113425.jpg (4032, 3024) samsung SM-N975U1 DTO 2026:09:28 11:34:25 sha256 537c318548dfc043 6587403
+20260928_115733.jpg (4032, 3024) samsung SM-N975U1 DTO 2026:09:28 11:57:33 sha256 a969213282c707a2 3105013
+20260928_115742.jpg (4032, 3024) samsung SM-N975U1 DTO 2026:09:28 11:57:42 sha256 295924f7c1ae42dd 3734559
+20260928_115842.jpg (4032, 3024) samsung SM-N975U1 DTO 2026:09:28 11:58:42 sha256 cbc20e3c8ac6b90e 3540322
+20260928_115852.jpg (4032, 3024) samsung SM-N975U1 DTO 2026:09:28 11:58:52 sha256 9f6906010bc65496 4592693
+20260928_121954.jpg (4032, 3024) samsung SM-N975U1 DTO 2026:09:28 12:19:54 sha256 eebd9d9b91772c13 7241396
+20260928_122050.jpg (4032, 3024) samsung SM-N975U1 DTO 2026:09:28 12:20:51 sha256 1bf771798191371d 3218520
+20260928_122101.jpg (4032, 3024) samsung SM-N975U1 DTO 2026:09:28 12:21:02 sha256 67117e41bbf13c3a 2659908
+Ghi chu: mtime tren dia cua 14 anh deu 'Sep 27 22:27' (thuoc tinh do cach chep MTP), gio chup lay theo EXIF DateTimeOriginal.
+
+== Doc thuoc 250 mm tu anh ==
+115733: vach 0 thang mat truoc khoi go (chup tu tren). 115742: chup tu tren, ong kinh o giua anh theo phuong do; mat truoc ong kinh trung vach but chi, doc ~25,0 cm.
+121954 (ca thuoc, dat thuoc lan khac): vach but chi doc ~24,6 cm; ong kinh xa tam anh nen lech thi sai, khong dung de doc dau ong kinh.
+Ket luan Tester: khoang cach ~246-250 mm theo anh (hai lan dat thuoc lech ~4 mm, khong co e-ke). D015 khong ghi dung sai; C2 so sanh tuong doi trong cung dot -> chap nhan kem gioi han.
+Thieu: moc bang dinh o chan de camera (A4.3) - khong thay trong anh nao; chi co vach but chi duoi ong kinh.
+
+== Kiem cong A8, 2026-09-28 12:46 ==
+Anh goc bo sung (moc chu L chan de camera):
+  docs/logs/c2-bo-tri-v8/20260928_1117/anh-goc-bo-sung/20260928_123449.jpg (4032, 3024) samsung SM-N975U1 DTO 2026:09:28 12:34:49
+  docs/logs/c2-bo-tri-v8/20260928_1117/20260928_123449.jpg (685, 913) Software Google Make None -> ban nen, giu nguyen
+SHA-256 toan bo thu muc dot (truoc khi chay B):
+6338b4bfcb8ac6fd275f12c57ba7597fd9dcd190eea35b19b81c6188e3b4286b *./20260928_113212.jpg
+d6881e12563d610c2f92678ca9d52e77eb1b75182a6e8273c8438fc2f8f41f3d *./20260928_113217.jpg
+5d29b144788d20479b2743b53ac0dc99936e93333f671ae4c4dec8417bea80d5 *./20260928_113222.jpg
+6437d9b15908edbf566b157a0fc6f165010ad71309c54fd12041e162016f10a8 *./20260928_113226.jpg
+6ab5b132598018d14e63e80db7c753e72759b805bf5b598b0bb74c93f587da1a *./20260928_113407.jpg
+2648ead5c5466406e6d9acd2d8a85ea48c0c1790ba3cbe29cc1e23279fa4d500 *./20260928_113411.jpg
+537c318548dfc043e3d7e55b60492ab45471dbc513ab252b4e9a8d9b3582c960 *./20260928_113425.jpg
+a969213282c707a200136841d6a09cfcadf97cc16e501fec05acd2fd6a869b18 *./20260928_115733.jpg
+295924f7c1ae42dd5a655f2f86fa8e5aafd15f946b4d95042467440fb8dc9b48 *./20260928_115742.jpg
+cbc20e3c8ac6b90ea51b9beba1a2516ff8e4b8960307d2ab1d143349b402c662 *./20260928_115842.jpg
+9f6906010bc65496b501a53f82f7061b15385ee15150954443a82847610c79d6 *./20260928_115852.jpg
+eebd9d9b91772c131412edbf20471dc5dc0dbcbc09d193db547fdae44e703138 *./20260928_121954.jpg
+1bf771798191371d9645351a8c69a4027715dad1e7bfe6457b3152fe43308638 *./20260928_122050.jpg
+67117e41bbf13c3ab0afbe9d43c1869ab8dcdd484e2ab69ae27d812ce5f5443f *./20260928_122101.jpg
+dbbd5b0a74db1844067b417ffb39dd352f20aa43a5c71129e139892d6ec48fe1 *./20260928_123449.jpg
+b54e9b170dfbe3a71361170cec47951238e9bd3274f16823356fcd35ed2ecbdb *./anh-goc-bo-sung/20260928_123449.jpg
+729c293e0473c13ae1d2a79452821bc31f14c4ff8ca87fae74350d68a53cda6a *./ghi-nhan-nguoi-dung.md
+SHA-256 anh A5 (raw):
+caeec534cf1dfee806430de4f7a2d211553e53b9dfd2ed61e558e1830cf83115 *data/raw/capture_20260928_112715/img_0001.jpg
+c99ad91e8fd5b36b092aeafb6daff10d48403cc6db0088293e4d9090144b7242 *data/raw/capture_20260928_113005/img_0001.jpg
+7bd5e5cc866d582e368c9ae307de737cd70a4b8cd2b30458a0eefa2061a4bfa2 *data/raw/capture_20260928_120001/img_0001.jpg
+58798f82047178fd45309145e35caaa59a7ce26c9c863bfc6185032ae809dc76 *data/raw/capture_20260928_122446/img_0001.jpg
+Nhan xet Tester: moc chu L dan luc 12:34, SAU anh A5 122446 (12:24) -> Tester se so vi tri mep khoi go (x~383) tren anh B2 voi A5 de kiem camera khong xe dich.
+So ghi nhan: bang 'Anh dien thoai' moi co 2 dong (moc chu L); 14 dong con lai nguoi dung dan truoc B1, Tester kiem o lan sau. Tester da tu doi chieu noi dung 14 anh (lan kiem 3).
+
+== Kiem B1-B3 lan 1, 2026-09-28 15:08 ==
+Probe docs/logs/probe_20260928_150138.json: 0x3500=12544 (x5), 0x350a=144 (x5) -> aec 783 (DA KEP tu 784), agc 9
+B2 capture_20260928_150226: PASS, trang thai tu dong dau/cuoi dung; /status doi: DOI o 2/76 truong: {'0x3404': [1323, 1307], 'framesize': [6, 10]}
+X-Timestamp: A5 122446 luc 12:24:50 ts=4118.7 s; B2 anh 1 luc 15:02:28 ts=183.3 s -> BO KHOI DONG LAI ~14:59:25.
+  -> probe 15:01:38 chay khi framesize=6 (QVGA mac dinh sau khoi dong), KHONG phai VGA. Quy trinh muc B: bo reset tu A5 den het B thi phai chay lai A5 roi moi B1.
+B2 img_0002: nua duoi (y>~285) soc doc tim/xanh - khung hong nhung decode_ok=True, bytes 15443 (4 anh kia 10882-10938).
+  sharpness: anh 2 mean 182.6 std 20.4 lap_var 120.6 sat_rgb 0.227; 4 anh kia mean 172.4-172.8 std 3.9.
+  m_ref (trung vi) 172.8 khong bi anh huong; O7 'max' va T5 (max lech) se bi anh huong neu khung hong xuat hien o phien preset/ma tran.
+Vi tri camera: mep trai khoi go x=382, mep tren khoi y=239 o ca A5 122446 va B2 anh 1/3/5 -> camera KHONG xe dich khi dan moc chu L.
+Anh sang: giay ROI 40,60,200,300: A5 12:24 mean 163.4 -> B2 15:02 mean 172.4 (sang hon 5.5%).
+Ket luan: B1/B2/B3 lan 1 khong dung (probe khong o VGA). Yeu cau: A5 lai -> B1 -> B2 -> B3 (ROI giu 40,60,200,300), giu nguyen du lieu cu.
+
+== Kiem A5 lai + B1-C2 lan 2, 2026-09-28 15:19 ==
+A5 lai capture_20260928_151109 PASS (x_ts 707.9 s luc 15:11:13); B2 capture_20260928_151158 PASS (x_ts 757.4 s luc 15:12:02) -> cung lan khoi dong 14:59:25, khong khoi dong lai them.
+Probe docs/logs/probe_20260928_151120.json: 0x3500=12544 x5, 0x350a=128 x5 -> aec_value 783 (DA KEP tu 784), agc_gain 8. Framesize luc probe = VGA (da dat tu 15:02, B2 lan 2 khong doi framesize).
+B2 lan 2: trang thai tu dong dau/cuoi dung; bytes: 10635 10584 10607 10599 10550
+B3 docs/logs/sharpness_20260928_151416 ROI 40,60,200,300: m_ref 169.6 (5 anh 169.2-169.7, std ~3.7), spread 1.8-2.8%, sat/dark rgb 0 -> khong khung hong.
+C1/C2: cam_VGA_q10_20260928{,_r01,_r02,_r03}.json = wb_mode 1..4, bang WB khop 4/4, 0x3406=1, aec 0 agc 0 awb 1 awb_gain 1, aec_value 783, agc_gain 8, vflip 1, VGA q10, verified null, validate_profile hop le 4/4.
+SHA-256 bon ho so:
+c3c0adbc3fec736341b34c8d4f2913e45f839297aad79b147937a13d4b4a83f3 *data/calibration/camera_profiles/cam_VGA_q10_20260928.json
+99e5d156904e5acacf36b56d614d8a0a7a20e92a9d3db4862e2404663c65fbb0 *data/calibration/camera_profiles/cam_VGA_q10_20260928_r01.json
+5e3f686b756bd38b7ad2fcbdc46bf7511494acc3256fe172a3f49f440c3a9633 *data/calibration/camera_profiles/cam_VGA_q10_20260928_r02.json
+a1fe9914560f2160bb55846a90c090a8068230e30fa51ec7c969237ac2add60d *data/calibration/camera_profiles/cam_VGA_q10_20260928_r03.json
+Ket luan: B va C DAT, nguoi dung duoc chay D.
+
+== Kiem D1/D2 + T5, 2026-09-28 15:30 ==
+m_ref 169.6 (B3 sharpness_20260928_151416). O5 d = |trung vi mean - m_ref| / m_ref; O6 trung vi channel_spread_pct; O7 max sat/dark_frac_rgb; T5 d = 100*max|mi-m|/m.
+wb=1 capture_20260928_152048 (sharpness_20260928_152438): O5 4.70% O6 10.62% O7 0/0 -> DAT; T5 0.080%
+wb=2 capture_20260928_152150 (sharpness_20260928_152613): O5 4.26% O6 6.76%  O7 0/0 -> DAT, spread nho nhat -> CHON; T5 0.187%
+wb=3 capture_20260928_152228 (sharpness_20260928_152747): O5 5.25% O6 23.50% O7 0/0 -> LOAI (O6)
+wb=4 capture_20260928_152301 (sharpness_20260928_152911): O5 7.47% O6 39.03% O7 0/0 -> LOAI (O6)
+Ca bon: PASS, thanh ghi WB sau ap dung bang, 0x3406=1, bay khoa sau ap = cuoi phien; bytes lech < 0.5%; std 3.3-3.5, lap_var 0.50-0.59 -> khong khung hong; x_ts lien tuc (khong khoi dong lai).
+D3: preset 2 (Cloudy) = cam_VGA_q10_20260928_r01, session capture_20260928_152150. E1 (Tester tinh tu per_image.csv): n=5 d=0.187% < 2% -> T5 DAT.
+
+== Kiem F/G/H, 2026-09-28 15:52 ==
+Phien -> ho so (camera_profile_id): 152150 r01(VGA q10 wb2) | 153631 cam_VGA_q20_20260928 | 153742 cam_SVGA_q10_20260928 | 153824 cam_SVGA_q20_20260928 | 154022 G-a r01 | 154135 G-b r01
+Ca nam phien F/G: PASS; 7 khoa sau ap = cuoi phien; 0x3500=12528 (783x16), 0x350a=127 (16x8-1), WB Cloudy (1616,1040,1264,1). x_ts lien tuc (cung lan khoi dong 14:59).
+T5 (docs/logs/sharpness_c2b_v8_20260928, ROI VGA 40,60,200,300 / SVGA 50,75,250,375): VGA q10 0.187% | VGA q20 0.286% | SVGA q10 0.150% | SVGA q20 0.092% | G-a 0.641% | G-b 0.131% -> DAT ca bon cau hinh ma tran.
+Mep (docs/logs/c2b-mep-v8-2026-09-28.log): VGA q10 1.57 px | VGA q20 1.94 | SVGA q10 1.97 (=1.57 px-VGA) | SVGA q20 2.07 (=1.65 px-VGA) | G-a 1.69 | G-b 3.21. Lap lai cung ho so VGA q10 (D1 vs G-a, cach 20 phut): 1.57 vs 1.69.
+Bytes TB (JPEG that): VGA q10 10556 | VGA q20 8736 | SVGA q10 14784 | SVGA q20 12438 | G-a 10530 | G-b 9269. elapsed_ms trung vi 460/508/704/755 (nhieu Wi-Fi, khong dung).
+153631 img_0003: file 10431 byte gom JPEG that 8753 byte + 1678 byte thua sau FFD9 dau tien (2 dau FFD9); anh giai ma nguyen ven, pixel khop cac anh khac (diff TB 0.74). Quet 60 anh 28/09: chi 1 anh nhu vay.
+Vi tri: mep trai khoi x=381-382, mep tren y=239-241, mep phai thuoc x=327 tu A5 122446 den G-b 154135 -> khong xe dich.
+Rem (G-a -> G-b): mean ROI 167.1 -> 140.4 (-16.0%), spread 6.67 -> 9.78%, mep 1.69 -> 3.21 px.
+
+== Tester chay thu I1/I2 tren ban sao (thu muc nhap), 2026-09-28 15:53 ==
+Hash TRUOC (ban that = ban sao):
+99e5d156904e5acacf36b56d614d8a0a7a20e92a9d3db4862e2404663c65fbb0 *data/calibration/camera_profiles/cam_VGA_q10_20260928_r01.json
+22fe2b76cb5f374c3a6276171193a6bdffdb604637084b8325559a1e5e9be413 *data/calibration/camera_profiles/cam_VGA_q20_20260928.json
+be793b0e915197df0d353ba4dd59f95f104c150361277483241d0eb19b27617e *data/calibration/camera_profiles/cam_SVGA_q10_20260928.json
+60c8b93c5948a5905c35a7a8f9fc3a72d02d0140083426ac0fac1e46f7c6d3bb *data/calibration/camera_profiles/cam_SVGA_q20_20260928.json
+Hash SAU du kien (ban sao sau I2 thu):
+c596a157256dca98550e20ca13c590ef09f3357e735e7ab6745d9cbcac18ce09 *data/calibration/camera_profiles/cam_SVGA_q10_20260928.json
+5c32b27b4e52a2518cba01caee03d19d95db1c31a0e8dde4fa315635ad85dbe6 *data/calibration/camera_profiles/cam_SVGA_q20_20260928.json
+ed6f8083a04b0609384c47465048152e2e96cb69eb02fd03c074e0f69ed2bdcd *data/calibration/camera_profiles/cam_VGA_q10_20260928_r01.json
+1976884ba5583fdf8b695c193d24c7a1f57240e458143dca1124e8ac1f38a17f *data/calibration/camera_profiles/cam_VGA_q20_20260928.json
+Ket qua thu: I1 4x 'No such file' + cap hash trung; I2 lan 1 'da sua' x4, lan 2 AssertionError x4; so voi .bak chi 'verified' doi, CRLF giu, validate_profile hop le.
+
+== Kiem I/J va anh G, 2026-09-28 16:09 ==
+Anh G (ban goc trong thu muc dot; trung tung byte voi tep nguoi dung gui qua chat 24-29.jpg):
+e4bfb86e17e3a0650d62fd03236c1b28014ce44d2e7261709578a83e1c7d2129 *20260928_154007.jpg
+bed90767d3754b48a09eec117a57c6e1834ad1abfa0344f93334399091572588 *20260928_154123.jpg
+d08907ac8c73a6bda52338473c048a3271206feaafd095416b7fce00b3992532 *20260928_154425.jpg
+30c7f15bed2a68075019774fc854f6fbad3ded5a0230db7cdb135dc73e45fc75 *20260928_154437.jpg
+6cbb3629042a5c6d170e4658a6b55444cb996a61a6f25bb7d91fb9a7fb828752 *20260928_154455.jpg
+0cd3c8d7842a81d4c84d72afbb34c4b74f5edbd92d835808a68496ffaddbcd7b *20260928_154511.jpg
+EXIF: Samsung SM-N975U1 4032x3024; DTO 15:40:07 (G1, truoc G-a 15:40:22) / 15:41:23 (G3, truoc G-b 15:41:35) / 15:44:25, 15:44:37, 15:44:55, 15:45:11 (G5).
+I: hash sau = du kien tu lan chay thu: ed6f8083 (r01) 1976884b (VGA q20) c596a157 (SVGA q10) 5c32b27b (SVGA q20); .bak = hash truoc; 3 ho so preset 1/3/4 van null.
+Ho so Vong 7 van nguyen: ed430617 cbb1384d 2cc6fb35 828f4def; .bak 27/09: 0f57d965 5ddb571e 494f89aa 4b4fc1db.
+J: DST=/c/Users/bestp/OneDrive/backup_scanner3d_20260928_1117. Tester tinh lai hash tu nguon va sha256sum -c tren ban sao: RAW 172/172 khop, HO SO 11/11 khop, LOG 154/155 khop - le duy nhat ghi-nhan-nguoi-dung.md (sua sau J: them 6 dong G theo uy quyen nguoi dung).
+Tester chep them so moi vao ban sao ten ghi-nhan-nguoi-dung_sau-J.md (cp -n, khong ghi de ban cu):
+67c99bdcc7eb2c7769406c4fdb32cca39df0a4c0d178da655effede322587c09 *docs/logs/c2-bo-tri-v8/20260928_1117/ghi-nhan-nguoi-dung.md
+67c99bdcc7eb2c7769406c4fdb32cca39df0a4c0d178da655effede322587c09 *<DST>/logs/c2-bo-tri-v8/20260928_1117/ghi-nhan-nguoi-dung_sau-J.md
+Dong bo OneDrive len may chu: Tester khong kiem duoc.
+Source cac phien B-G: commit d2c2933, dirty=True do so ghi nhan/log Tester chua commit; pc/ khong doi (git diff d2c2933..HEAD -- pc/ rong).

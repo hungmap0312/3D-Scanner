@@ -1,0 +1,16 @@
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x10cc
+load:0x403c8700,len:0xc2c
+load:0x403cb700,len:0x30b0
+entry 0x403c88b8
+Flash: 16 MB
+PSRAM: 8192 KB
+
+Camera Init OK: fb_count=1, grab_mode=1, fb_location=0
+Camera PID: 0x3660
+WiFi connecting....
+WiFi connected, IP 192.168.31.9
+Boot ID: d84c70cd847a3c9a00fcafad29f840d2
+Camera Ready! Use 'http://192.168.31.9' to connect

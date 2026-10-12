@@ -1,0 +1,43 @@
+{
+  "verdict": "INVALID",
+  "host": "192.168.31.9",
+  "port": 80,
+  "requested_count": 15,
+  "total_sent": 2,
+  "success_count": 1,
+  "interval_sec": 0.5,
+  "per_request_deadline_sec": 10.0,
+  "start_time": "2026-10-06T10:23:48.849963",
+  "end_time": "2026-10-06T10:24:04.450545",
+  "commit_sha": null,
+  "build_sha": null,
+  "error": "TIMEOUT_TOTAL_DEADLINE: Request vuot qua deadline tong 10.0s (cleanup mat 0.0ms)",
+  "frames": [
+    {
+      "index": 1,
+      "status": 200,
+      "rtt_ms": 5000.0,
+      "frame_id": 1,
+      "boot_id": "e5ef07971ca94f37750a79b2062e9fb0",
+      "t_frame_us": 832185526,
+      "t_req_us": 832179805,
+      "discarded": 1,
+      "body_len": 11249,
+      "error": null,
+      "valid": true
+    },
+    {
+      "index": 2,
+      "status": 200,
+      "rtt_ms": 10015.999999999622,
+      "frame_id": null,
+      "boot_id": null,
+      "t_frame_us": null,
+      "t_req_us": null,
+      "discarded": null,
+      "body_len": 9820,
+      "error": "TIMEOUT_TOTAL_DEADLINE: Request vuot qua deadline tong 10.0s (cleanup mat 0.0ms)",
+      "valid": false
+    }
+  ]
+}

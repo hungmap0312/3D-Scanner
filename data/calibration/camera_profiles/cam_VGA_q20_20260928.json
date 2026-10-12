@@ -1,0 +1,40 @@
+{
+  "camera_profile_id": "cam_VGA_q20_20260928",
+  "created_at": "2026-09-28T15:32:02.125+07:00",
+  "source": {
+    "commit": "d2c2933f2763043698ce8d2bf103a52266e8cfcf",
+    "branch": "feat/c2-camera-profile",
+    "dirty": true
+  },
+  "board": "ESP32-S3 N16R8",
+  "sensor": "OV3660 PID 0x3660",
+  "framesize": "VGA",
+  "quality": 20,
+  "controls": {
+    "aec": 0,
+    "agc": 0,
+    "awb": 1,
+    "brightness": 1,
+    "contrast": 0,
+    "saturation": -2,
+    "hmirror": 0,
+    "vflip": 1,
+    "lenc": 1,
+    "dcw": 1,
+    "aec_value": 783,
+    "agc_gain": 8,
+    "awb_gain": 1,
+    "wb_mode": 2
+  },
+  "expected_registers": {
+    "0x3500": 12528,
+    "0x350a": 127,
+    "0x3400": 1616,
+    "0x3404": 1264,
+    "0x3402": 1040,
+    "0x3406": 1,
+    "0x3503": 3
+  },
+  "lens_note": "ong kinh goc, tieu diem xa; C2b Vong 8 dot 20260928_1117",
+  "verified": {"session_id": "capture_20260928_153631", "mean_drift_pct": 0.286, "registers_stable": true}
+}

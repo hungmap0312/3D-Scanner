@@ -1,0 +1,48 @@
+# e2e capture_session + mock_camera, 2026-09-20, nhanh fix/capture-session-r02-r05
+# lenh: .venv/Scripts/python.exe pc/e2e_capture_mock.py (mock nhung trong tien trinh, thu muc tam, tu don)
+== baseline               rc=0 verdict=PASS reason=
+   attempts=3 files=['img_0001.jpg', 'img_0002.jpg', 'img_0003.jpg']
+   status: khong doi (da doi chieu 6 truong)
+   mirror session.json: {
+  "session
+== retry_recovers         rc=0 verdict=PASS reason=
+   attempts=4 files=['img_0001.jpg', 'img_0002.jpg', 'img_0002_try1.bin', 'img_0003.jpg']
+   status: khong doi (da doi chieu 6 truong)
+   mirror session.json: {
+  "session
+== missing_timestamp      rc=0 verdict=PASS reason=
+   attempts=4 files=['img_0001.jpg', 'img_0002.jpg', 'img_0002_try1.jpg', 'img_0003.jpg']
+   status: khong doi (da doi chieu 6 truong)
+   mirror session.json: {
+  "session
+== lowercase_headers      rc=0 verdict=PASS reason=
+   attempts=3 files=['img_0001.jpg', 'img_0002.jpg', 'img_0003.jpg']
+   status: khong doi (da doi chieu 6 truong)
+   mirror session.json: {
+  "session
+== status_invalid         rc=1 verdict=FAIL reason=khong doc duoc /status luc bat dau: khong phai JSON: Expecting value: line 1 column 1 (char 0)
+   attempts=0 files=[]
+== status_list            rc=1 verdict=FAIL reason=khong doc duoc /status luc bat dau: JSON khong phai object (list)
+   attempts=0 files=[]
+== status_end_503         rc=1 verdict=FAIL reason=/status khong doi chieu duoc: cuoi: http 503
+   attempts=3 files=['img_0001.jpg', 'img_0002.jpg', 'img_0003.jpg']
+   status: KHONG DOI CHIEU DUOC (cuoi: http 503)
+   mirror session.json: {
+  "session
+== reset_at_2             rc=1 verdict=FAIL reason=nghi reset 1 lan
+   attempts=3 files=['img_0001.jpg', 'img_0002.jpg', 'img_0003.jpg']
+   status: khong doi (da doi chieu 6 truong)
+   mirror session.json: {
+  "session
+== count_0                rc=2 verdict=None reason=None
+   attempts=0 files=[]
+== metadata_collision     rc=2 verdict=None reason=None
+   attempts=0 files=[]
+   mirror session.json: OLD_METADATA
+== exhaust_retries        rc=1 verdict=FAIL reason=anh dat 2/3; thieu X-Timestamp o 1 anh, khong du bang chung kiem reset
+   attempts=3 files=['img_0001.jpg', 'img_0002.jpg', 'img_0003.jpg']
+   status: khong doi (da doi chieu 6 truong)
+   mirror session.json: {
+  "session
+# selftest:
+SELFTEST: PASS

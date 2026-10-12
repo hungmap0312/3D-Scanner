@@ -1,0 +1,82 @@
+{
+  "verdict": "INVALID",
+  "host": "192.168.31.9",
+  "port": 80,
+  "requested_count": 15,
+  "total_sent": 5,
+  "success_count": 4,
+  "interval_sec": 0.5,
+  "per_request_deadline_sec": 10.0,
+  "start_time": "2026-10-06T20:40:17.098813",
+  "end_time": "2026-10-06T20:40:24.905814",
+  "commit_sha": null,
+  "build_sha": null,
+  "error": "TIMEOUT_SOCKET: Socket timeout (5.0s) truoc khi het deadline tong 10.0s",
+  "frames": [
+    {
+      "index": 1,
+      "status": 200,
+      "rtt_ms": 203.00000000042928,
+      "frame_id": 2,
+      "boot_id": "d84c70cd847a3c9a00fcafad29f840d2",
+      "t_frame_us": 211315761,
+      "t_req_us": 211314618,
+      "discarded": 1,
+      "body_len": 11539,
+      "error": null,
+      "valid": true
+    },
+    {
+      "index": 2,
+      "status": 200,
+      "rtt_ms": 188.00000000010186,
+      "frame_id": 3,
+      "boot_id": "d84c70cd847a3c9a00fcafad29f840d2",
+      "t_frame_us": 212072121,
+      "t_req_us": 212054031,
+      "discarded": 1,
+      "body_len": 11664,
+      "error": null,
+      "valid": true
+    },
+    {
+      "index": 3,
+      "status": 200,
+      "rtt_ms": 171.99999999957072,
+      "frame_id": 4,
+      "boot_id": "d84c70cd847a3c9a00fcafad29f840d2",
+      "t_frame_us": 212756448,
+      "t_req_us": 212728939,
+      "discarded": 1,
+      "body_len": 11651,
+      "error": null,
+      "valid": true
+    },
+    {
+      "index": 4,
+      "status": 200,
+      "rtt_ms": 171.99999999957072,
+      "frame_id": 5,
+      "boot_id": "d84c70cd847a3c9a00fcafad29f840d2",
+      "t_frame_us": 213440782,
+      "t_req_us": 213417345,
+      "discarded": 1,
+      "body_len": 11531,
+      "error": null,
+      "valid": true
+    },
+    {
+      "index": 5,
+      "status": null,
+      "rtt_ms": 5016.000000000531,
+      "frame_id": null,
+      "boot_id": null,
+      "t_frame_us": null,
+      "t_req_us": null,
+      "discarded": null,
+      "body_len": 0,
+      "error": "TIMEOUT_SOCKET: Socket timeout (5.0s) truoc khi het deadline tong 10.0s",
+      "valid": false
+    }
+  ]
+}

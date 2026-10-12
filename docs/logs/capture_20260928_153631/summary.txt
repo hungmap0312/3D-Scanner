@@ -1,0 +1,14 @@
+Phien capture_20260928_153631 tren 192.168.31.9
+Nguon: d2c2933f2763043698ce8d2bf103a52266e8cfcf (feat/c2-camera-profile, working tree BAN)
+Framesize: VGA, kich thuoc mong doi (640, 480)
+Ket qua: PASS
+  anh dat/yeu cau       : 5/5
+  tong so lan chup lai  : 0
+  loi ket noi           : 0
+  nghi reset (ts lui)   : 0
+  bang chung kiem reset : 4/4 phep so timestamp
+  anh trung anh truoc   : 0
+  X-Timestamp trung     : 0
+  thoi gian phien       : 8.9 s
+  /capture ms min/tb/max: 266 / 529 / 846
+  /status doi start->end: DOI o 2/76 truong: {'0x5585': [53, 52], 'framesize': [11, 10]}

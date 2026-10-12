@@ -1,0 +1,43 @@
+﻿{
+    "session_dir":  "docs\\logs\\c5a_q6_rst_20261006_201017",
+    "git_commit":  "205efc454569643c5b6f7d529006d740f57229c7",
+    "fqbn":  "esp32:esp32:esp32s3:PSRAM=opi",
+    "esp32_core_version":  "3.3.11",
+    "binary_path":  "firmware/esp32s3/CameraWebServerTest/build/q6/CameraWebServerTest.ino.bin",
+    "binary_sha256":  "e9dcc182af2e1c48a853c2c118878d5a96feb5bbe17c67f95ad6f68b2b847b3c",
+    "baseline_source_commit":  "e92867eecf5eaad308ab1a222069de07d964e6fb",
+    "baseline_binary_path":  "firmware/esp32s3/CameraWebServerTest/build/baseline/CameraWebServerTest.ino.bin",
+    "baseline_binary_sha256":  "842e56c0de3b352b269e3a2b0a4d44f42ea34e1ad7ac5e37505e21e365c1c2a1",
+    "baseline_note":  "baseline tái build từ main, chưa chứng minh trùng firmware trên bo",
+    "artifact_archive_dir":  "build\\c5a-artifacts\\archive_20261006_201212_q6",
+    "artifacts":  [
+                      {
+                          "name":  "bootloader",
+                          "offset":  "0x00000000",
+                          "file":  "CameraWebServerTest.ino.bootloader.bin",
+                          "sha256":  "5f95cbc8b40b7a373f9cb85b534cb7a570cdad30ca27c7021775d830ca03276b",
+                          "size":  19968
+                      },
+                      {
+                          "name":  "partitions",
+                          "offset":  "0x00008000",
+                          "file":  "CameraWebServerTest.ino.partitions.bin",
+                          "sha256":  "913af702edd8282bbd34de315562d5b0db0ac7ef931c45e715befa17b3fc6967",
+                          "size":  3072
+                      },
+                      {
+                          "name":  "boot_app0",
+                          "offset":  "0x0000e000",
+                          "file":  "boot_app0.bin",
+                          "sha256":  "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
+                          "size":  8192
+                      },
+                      {
+                          "name":  "app",
+                          "offset":  "0x00010000",
+                          "file":  "CameraWebServerTest.ino.bin",
+                          "sha256":  "e9dcc182af2e1c48a853c2c118878d5a96feb5bbe17c67f95ad6f68b2b847b3c",
+                          "size":  1004880
+                      }
+                  ]
+}

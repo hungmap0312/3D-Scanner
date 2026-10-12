@@ -1,0 +1,56 @@
+{
+  "report_id": "sharpness_20260928_152911",
+  "created_at": "2026-09-28T15:29:11.538+07:00",
+  "script": "pc/sharpness.py",
+  "source": {
+    "commit": "d2c2933f2763043698ce8d2bf103a52266e8cfcf",
+    "branch": "feat/c2-camera-profile",
+    "dirty": true
+  },
+  "args": {
+    "roi": [
+      "40,60,200,300"
+    ],
+    "ruler": [],
+    "sessions": [
+      "capture_20260928_152301"
+    ]
+  },
+  "sessions": [
+    {
+      "session_id": "capture_20260928_152301",
+      "dir": "D:\\datascanner3d\\raw\\capture_20260928_152301",
+      "framesize": "VGA",
+      "note": "C2 Vong 8 dot 20260928_1117, thu wb_mode=4",
+      "capture_commit": "d2c2933f2763043698ce8d2bf103a52266e8cfcf",
+      "started_at": "2026-09-28T15:23:01.165+07:00",
+      "verdict": "PASS",
+      "skipped_decode_fail": 0,
+      "n_images": 5,
+      "width": 640,
+      "height": 480,
+      "roi": [
+        40,
+        60,
+        200,
+        300
+      ],
+      "lap_var_median": 0.5351840369352548,
+      "lap_var_min": 0.5234221224887766,
+      "lap_var_max": 0.5498949223781439,
+      "grad_energy_median": 7.544708833299437,
+      "mean_median": 156.93333333333334,
+      "std_median": 3.3339199483824173,
+      "sat_frac_max": 0.0,
+      "dark_frac_max": 0.0,
+      "mean_r_median": 125.6668,
+      "mean_g_median": 166.97913333333332,
+      "mean_b_median": 187.93446666666668,
+      "channel_spread_pct_median": 39.0292918145453,
+      "dark_frac_rgb_max": 0.0,
+      "sat_frac_rgb_max": 0.0,
+      "representative": "img_0003.jpg",
+      "ruler": null
+    }
+  ]
+}

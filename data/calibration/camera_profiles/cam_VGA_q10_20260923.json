@@ -1,0 +1,37 @@
+{
+  "camera_profile_id": "cam_VGA_q10_20260923",
+  "created_at": "2026-09-23T11:22:03.123+07:00",
+  "source": {
+    "commit": "8dcf22728001a20ad1c083b4797ed3dc46b51b5e",
+    "branch": "feat/c2-camera-profile",
+    "dirty": true
+  },
+  "board": "ESP32-S3 N16R8",
+  "sensor": "OV3660 PID 0x3660",
+  "framesize": "VGA",
+  "quality": 10,
+  "controls": {
+    "aec": 0,
+    "agc": 0,
+    "awb": 0,
+    "aec_value": 490,
+    "agc_gain": 2,
+    "awb_gain": 0,
+    "wb_mode": 0,
+    "brightness": 0,
+    "contrast": 0,
+    "saturation": 0,
+    "hmirror": 0,
+    "vflip": 0,
+    "lenc": 1,
+    "dcw": 1
+  },
+  "expected_registers": {
+    "0x3500": 7840,
+    "0x350a": 31,
+    "0x3400": 1643,
+    "0x3404": 1459
+  },
+  "lens_note": "ong kinh goc, tieu diem xa",
+  "verified": null
+}

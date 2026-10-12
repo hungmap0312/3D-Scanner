@@ -1,0 +1,14 @@
+{
+  "nguon": "C:\\Users\\bestp\\Downloads\\log_4-10.docx",
+  "nguoi_cung_cap": "nguoi dung (2026-10-05)",
+  "buoi_mo_ta": "2026-10-04, phien c5a_q6_20261004_221728 -> c5a_q6_20261004_225200",
+  "kich_thuoc_byte": 20505,
+  "sha256": "94045e82421ed6895ea2d6c34fc0b29dbd1fc184caf2f2d8cb8b5124c36d9a2d",
+  "doc_hai_lan_cung_bytes": true,
+  "thoi_diem_chep_vao_repo": "2026-10-05T09:10:27+07:00",
+  "cach_trich": "word/document.xml, noi cac <w:t> trong tung <w:p>, bo doan rong, giai ma 5 thuc the XML; khong sua chu, khong chuan hoa xuong dong",
+  "so_doan_than_co_chu": 6,
+  "so_doan_tong": 6,
+  "gioi_han": "ban chep terminal trong Word, khong giu nguyen xuong dong; khong co exit code upload/gio tung dong; khong phai readback flash",
+  "nguoi_chep": "Tester Vong 18 (Claude Code)"
+}

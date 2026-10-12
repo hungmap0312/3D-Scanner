@@ -1,0 +1,18 @@
+Trich van ban AOS AO3400 datasheet - Tester Claude Code, 2026-10-07 21:49 +0700
+Nguon: https://www.aosmd.com/pdfs/datasheet/AO3400.pdf (tai qua WebFetch 07/10/2026; PDF khong luu vao repo)
+sha256 PDF: 78d25ce9d2a776f837b3db4f180c31ebbfaa0aa47c9ac296e2b54c63aeda7d24
+Cach trich: giai nen stream FlateDecode bang zlib, lay chuoi trong toan tu Tj/TJ (script tam ngoai repo); khoang trang trong so la do ngat chuoi cua PDF
+
+== Product Summary (trang 1) ==
+AO3400 30VN-Channel MOSFET General Description P roduct Summary V DS    I D   \(at V GS =10V\) 5 .8A    R DS\(ON\)  \(at V GS =10V\) <  28m W    R DS\(ON\)  \(at V GS  = 4.5V\) <  33m W    R DS\(ON\)  \(at V GS  = 2.5V\) <  52m W Symbol V DS The AO3400 combines advanced trench MOSFET technology with a low resistance package to provide extremely low R DS\(ON\) .  This device is suitable for use as a l oad switch or in PWM applications. V Maximum Units Parameter A
+
+== Absolute Maximum Ratings (trang 1) ==
+Symbol t   \001  10s Steady-State Steady-State R q J L 1.4 M aximum Junction-to-Lead \260C/W \260C/W Maximum Junction-to-Ambient  A D 63 125 80 Maximum Junction-to-Ambient  A Units A I D 5.8 4 .9 30 T A =25\260C T A =70\260C P ulsed Drain Current  C Continuous Drain C urrent V V \26112 Gate-Source Voltage Drain-Source Voltage 30 Parameter TypMax \260C/W R q J A 70 1 00 90 0.9 T A =70\260C J unction and Storage Temperature Range -55 to 150 \260C Thermal Characteristics Power Dissipation  B P D T A =25\260C W G  D S (((((XXX
+
+== Pin / Top View (trang 1) ==
+              Bottom View  D G S G S D            Rev 8: Dec 2011 www.aosmd.com Page 1 of 5
+
+== Electrical Characteristics (trang 2) ==
+AO3400    Symbol MinTypMaxUnits BV DSS 30 V V DS =30V, V GS =0V 1 T J =55\260C 5 I GSS 100nA V GS\(th\) Gate Threshold Voltage 0.651.051.45V I D\(ON\) 30 A 1828 T J =125\260C 2839 1933m W 2452m W g FS 33 S V SD 0.71V I S 2A C iss 630 pF C oss 75 pF C rss 50 pF R g 1.534.5 W Q g 67nC Q gs 1.3 nC Q gd 1.8 nC t D\(on\) 3 ns t 2.5 ns Reverse Transfer Capacitance V GS =0V, V DS =15V, f=1MHz SWITCHING PARAMETERS Electrical Characteristics \(T J =25\260C unless otherwise noted\) STATIC PARAMETERS Parameter Conditions Drain-Source Breakdown Voltage On state drain current I D =250 m A, V GS =0V V GS =4.5V, V DS =5V V GS =10V, I D =5.8A Forward Transconductance Diode Forward Voltage I S =1A,V GS =0V V DS =5V, I D =5.8A V GS =2.5V,
+
+Doc ket qua: Rev 8 Dec 2011; VDS 30 V; ID 5,8 A (TA=25C, VGS=10V), 4,9 A (TA=70C); RDS(ON) max <28 mOhm @10V, <33 mOhm @4,5V, <52 mOhm @2,5V; VGS(th) 0,65/1,05/1,45 V; Top View: D tren, G S duoi.

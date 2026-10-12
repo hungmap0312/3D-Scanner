@@ -1,0 +1,40 @@
+# Lan nap thu hai cua PsramTest, ban tai commit 9948bbd tro di (co mau word).
+# Nguoi dung chep tu Serial Monitor ngay 2026-09-16.
+# Thu muc sketch da co sketch.yaml ghi PSRAM=opi.
+#
+# Phan 1: mo sketch trong Arduino IDE, Tools > PSRAM hien "Disabled".
+#         -> IDE KHONG doc sketch.yaml. Nap thu voi gia tri do:
+
+=== PsramTest: ghi/doc PSRAM tren ESP32-S3 ===
+psramFound: no
+PSRAM truoc khi thu: total 0 KB, free 0 KB, largest free block 0 KB
+RESULT_1MIB    : FAIL (khong nhan PSRAM)
+RESULT_LARGEST : SKIP
+GOI Y: firmware nay duoc build voi PSRAM tat. Trong Arduino IDE, menu
+       Tools > PSRAM la thiet lap theo tung sketch dang mo; mo sketch moi
+       thi no co the tro ve Disabled. Kiem tra lai roi nap lai.
+
+# Phan 2: doi tay Tools > PSRAM sang "OPI PSRAM", nap lai:
+
+=== PsramTest: ghi/doc PSRAM tren ESP32-S3 ===
+psramFound: yes
+PSRAM truoc khi thu: total 8192 KB, free 8188 KB, largest free block 8063 KB
+
+[A] Cap phat 1 MiB trong PSRAM va thu sau mau
+  buffer tai 0x3c040eec, nam trong RAM ngoai: yes
+  pattern 0x00 : write   97 ms, read  125 ms : OK
+  pattern 0xFF : write   97 ms, read  126 ms : OK
+  pattern 0xAA : write   97 ms, read  125 ms : OK
+  pattern 0x55 : write   97 ms, read  125 ms : OK
+  pattern inc  : write   98 ms, read  125 ms : OK
+  pattern lcg  : write  118 ms, read  148 ms : OK
+RESULT_1MIB    : PASS
+
+[B] Cap phat khoi lon nhat con trong, ghi word = chi so word
+  khoi lon nhat con trong: 8063 KB
+  buffer tai 0x3c040eec, nam trong RAM ngoai: yes
+  pattern word : write  236 ms, read  217 ms : OK
+RESULT_LARGEST : PASS (8063 KB)
+
+PSRAM sau khi thu: total 8192 KB, free 8188 KB, largest free block 8063 KB
+=== het ===
