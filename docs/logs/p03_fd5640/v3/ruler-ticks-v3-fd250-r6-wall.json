@@ -1,0 +1,80 @@
+{
+  "session_id": "capture_p03_fd5640_250mm_r6",
+  "n_images": 5,
+  "width": 640,
+  "height": 480,
+  "band": [
+    306,
+    322,
+    272,
+    476
+  ],
+  "lag": [
+    18,
+    40
+  ],
+  "edge": [
+    284,
+    175,
+    238
+  ],
+  "images": [
+    {
+      "period_px": 21.2,
+      "ac_strength": 0.708,
+      "edge_rows_used": 63,
+      "edge_width_px_median": 2.73,
+      "file": "img_0001.jpg"
+    },
+    {
+      "period_px": 21.17,
+      "ac_strength": 0.731,
+      "edge_rows_used": 63,
+      "edge_width_px_median": 2.58,
+      "file": "img_0002.jpg"
+    },
+    {
+      "period_px": 21.17,
+      "ac_strength": 0.729,
+      "edge_rows_used": 63,
+      "edge_width_px_median": 2.47,
+      "file": "img_0003.jpg"
+    },
+    {
+      "period_px": 21.2,
+      "ac_strength": 0.691,
+      "edge_rows_used": 63,
+      "edge_width_px_median": 2.54,
+      "file": "img_0004.jpg"
+    },
+    {
+      "period_px": 21.18,
+      "ac_strength": 0.718,
+      "edge_rows_used": 63,
+      "edge_width_px_median": 2.62,
+      "file": "img_0005.jpg"
+    }
+  ],
+  "period_mean_profile_px": 21.18,
+  "ac_strength_mean_profile": 0.74,
+  "tick_y": [
+    275,
+    296,
+    318,
+    339,
+    360,
+    381,
+    403,
+    424,
+    445
+  ],
+  "fit_px_per_cm": 21.267,
+  "fit_resid_max_px": 0.42,
+  "n_ticks": 9,
+  "mm_per_px": 0.4702,
+  "fov_w_mm": 300.9,
+  "fov_h_mm": 225.7,
+  "ruler_arg": "capture_p03_fd5640_250mm_r6=314.0,275.0,314.0,445.2,80",
+  "edge_width_px_median": 2.58,
+  "edge_width_mm": 1.213
+}

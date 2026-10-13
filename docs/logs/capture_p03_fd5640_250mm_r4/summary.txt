@@ -1,0 +1,14 @@
+Phien capture_p03_fd5640_250mm_r4 tren 192.168.31.9
+Nguon: 48c52a579d4cafd0b50027b3ece11a4be57515c6 (docs/p03-fd5640-danh-gia, working tree BAN)
+Framesize: VGA, kich thuoc mong doi (640, 480)
+Ket qua: PASS
+  anh dat/yeu cau       : 5/5
+  tong so lan chup lai  : 0
+  loi ket noi           : 0
+  nghi reset (ts lui)   : 0
+  bang chung kiem reset : 4/4 phep so timestamp
+  anh trung anh truoc   : 0
+  X-Timestamp trung     : 0
+  thoi gian phien       : 12.4 s
+  /capture ms min/tb/max: 109 / 440 / 1386
+  /status doi start->end: DOI o 3/78 truong: {'0x3400': [1509, 1506], '0x3404': [1477, 1473], 'framesize': [6, 10]}

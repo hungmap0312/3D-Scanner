@@ -1,0 +1,14 @@
+Phien capture_fd5640_350mm tren 192.168.31.9
+Nguon: 2421f5a30cb23fe08c3689bfc6d0174948adeaf2 (main, working tree BAN)
+Framesize: VGA, kich thuoc mong doi (640, 480)
+Ket qua: PASS
+  anh dat/yeu cau       : 5/5
+  tong so lan chup lai  : 0
+  loi ket noi           : 0
+  nghi reset (ts lui)   : 0
+  bang chung kiem reset : 4/4 phep so timestamp
+  anh trung anh truoc   : 0
+  X-Timestamp trung     : 0
+  thoi gian phien       : 12.3 s
+  /capture ms min/tb/max: 342 / 797 / 2370
+  /status doi start->end: DOI o 4/78 truong: {'0x3400': [1510, 1506], '0x3404': [1471, 1463], 'framesize': [6, 10], 'heap_internal_free_bytes': [201700, 201692]}

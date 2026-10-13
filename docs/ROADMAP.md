@@ -7,7 +7,8 @@ tiêu chí, trình tự và bàn giao tuần 2 đang thực hiện. Trạng thá
 
 ## 1. Phạm vi và mốc đích
 
-- Giữ STM32 Nucleo-F446RE điều khiển, ESP32-S3/OV3660 thu ảnh, PC điều phối
+- Giữ STM32 Nucleo-F446RE điều khiển, ESP32-S3 + camera FD5640/OV5640 thu ảnh ở cự ly
+  200 mm (D087, thay OV3660 từ 13/10/2026), PC điều phối
   và xử lý; một camera, một laser vạch, một trục quay; vật đục, nhám 50–100 mm.
 - Một cấu hình camera chính kế thừa tuần 2; **200 góc/vòng, 400 ảnh OFF/ON
   được chọn hợp lệ**, giữ riêng mọi payload thử lại.
@@ -93,7 +94,7 @@ kế hoạch tuần 2, không dùng roadmap mới để bỏ cổng.
 | Khối | Đầu vào | Đầu ra và kiểm chứng |
 | --- | --- | --- |
 | B1 | G; giao thức C4 đã chốt; thông tin linh kiện thực đủ đối chiếu | Thiết kế truyền động, tải, HOME/gá; sơ đồ driver/nguồn; giới hạn HOME, chuyển động, chờ ổn định, xử lý lỗi |
-| B2 | B1 qua cổng; linh kiện kiểm nhận; sơ đồ trước lắp; mạch/nguồn đủ điều kiện | Firmware, cơ cấu; HOME 10/10; không thấy HOME phải dừng; đo độc lập 24/48 xung; 10 vòng có tải; ảnh ở bốn mức chờ 100/200/400/800 ms để chọn mức cố định |
+| B2 | B1 qua cổng; linh kiện kiểm nhận; sơ đồ trước lắp | Firmware, cơ cấu; lắp và chạy thẳng có tải (D086); HOME 10/10 quan sát qua log; không thấy HOME phải dừng; quay nhiều vòng có tải, dấu trên mâm về đúng chỗ (quan sát/ảnh); thời gian chờ ổn định đặt cố định (đề xuất 500 ms), chỉnh khi ảnh quét thật bị nhoè. Bỏ đo độc lập 24/48 xung và thử bốn mức chờ |
 
 Mục tiêu lệch dấu chuẩn ≤1 mm tại R=70 mm. Góc theo xung là góc điều
 khiển ước tính. Firmware/giả lập làm được khi chờ linh kiện; gá quang học
@@ -104,13 +105,17 @@ theo hồ sơ phần cứng đã được duyệt và kiểm chứng.
 ### C — Nguồn và PCB [Q5 → Q7 → Q8 → Q9]
 
 C1 cần G/B1 thống nhất chân, tải, đầu nối; làm cùng firmware B2. C2 cần
-mạch laser C6 và chuyển động B2 đã thử thực. Chuỗi:
-schematic → thử mạch/tải → chốt chân/linh kiện → layout → ERC/DRC →
-chế tạo → kiểm nguồn → gắn tải → kiểm toàn bo. Chỉ đặt bo sau kiểm mạch.
+mạch laser C6 và chuyển động B2 đã chạy thật. Vẽ bằng **EasyEDA** (D086,
+thay KiCad). Chuỗi: schematic → chốt chân/linh kiện → layout → kiểm tra
+thiết kế (ERC/DRC của EasyEDA) → đặt chế tạo (có thể đặt thẳng JLCPCB từ
+EasyEDA) → hàn → cấp nguồn và chạy thẳng toàn bo với tải thật. Bỏ chặng
+thử tải mạch trước layout và đo áp nguồn bằng VOM (D086).
 
 Đầu ra: schematic, layout hai lớp, Gerber, drill, BOM, bản vẽ kết nối,
-biên bản; ERC/DRC không còn lỗi chưa xử lý/giải trình. Mục tiêu nguồn
-camera 4,75–5,25 V với tải; PCB chạy tải thật. Không chờ mô hình 3D hoàn chỉnh để đặt PCB. Thời gian nhận
+biên bản; ERC/DRC không còn lỗi chưa xử lý/giải trình. PCB chạy tải thật
+(quan sát chức năng: động cơ, laser, camera chạy đồng thời, không khởi
+động lại bất thường). Mục tiêu nguồn camera 4,75–5,25 V giữ làm thông số
+thiết kế, không còn là cổng đo (D086). Không chờ mô hình 3D hoàn chỉnh để đặt PCB. Thời gian nhận
 bo chưa bảo đảm; thiếu PCB vẫn là việc chưa đạt.
 
 ### D — Điều phối quét [Q3, Q4, Q6, Q9 giả lập → Q8/Q9 thật]

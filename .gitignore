@@ -52,8 +52,6 @@ Thumbs.db
 # Local markers, backups and measurements deferred by the user
 /docs/logs/.c5a_session_current
 /docs/logs/cam_*.json.bak
-/docs/logs/capture_fd5640_*
-/docs/logs/capture_p03_*
 /docs/logs/ping_*
 
 # Internal session records, decisions, reviews and agent handover transcripts

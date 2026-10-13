@@ -1,0 +1,72 @@
+{
+  "report_id": "sharpness-v3-fd250-r1",
+  "created_at": "2026-10-13T00:00:56.054+07:00",
+  "script": "pc/sharpness.py",
+  "source": {
+    "commit": "267a0d6506eb5602291392fb7b5571c9796e8311",
+    "branch": "docs/p03-fd5640-danh-gia",
+    "dirty": false
+  },
+  "args": {
+    "roi": [
+      "290,115,72,361"
+    ],
+    "ruler": [
+      "capture_p03_fd5640_250mm_r1=333.5,281.6,333.5,451.8,70"
+    ],
+    "sessions": [
+      "D:/datascanner3d/raw/capture_p03_fd5640_250mm_r1"
+    ]
+  },
+  "annotated": [
+    "annotated_capture_p03_fd5640_250mm_r1.jpg"
+  ],
+  "sessions": [
+    {
+      "session_id": "capture_p03_fd5640_250mm_r1",
+      "dir": "D:\\datascanner3d\\raw\\capture_p03_fd5640_250mm_r1",
+      "framesize": "VGA",
+      "note": "FD5640 500W-V11, 250 mm that (do tu mat truoc ong kinh), bo tri nhu 17/09; den phong",
+      "capture_commit": "d9be46629af53a55bf4f445c1ec9beb9d95c9d2b",
+      "started_at": "2026-10-11T19:28:44.428+07:00",
+      "verdict": "PASS",
+      "skipped_decode_fail": 0,
+      "n_images": 5,
+      "width": 640,
+      "height": 480,
+      "roi": [
+        290,
+        115,
+        72,
+        361
+      ],
+      "lap_var_median": 58.349039013841114,
+      "lap_var_min": 56.801715843233964,
+      "lap_var_max": 59.66462614856389,
+      "grad_energy_median": 1728.8313569438917,
+      "mean_median": 127.58583410280086,
+      "std_median": 39.58088197887307,
+      "sat_frac_max": 0.0,
+      "dark_frac_max": 0.0,
+      "mean_r_median": 127.22279932286858,
+      "mean_g_median": 129.54132040627886,
+      "mean_b_median": 118.49134349030471,
+      "channel_spread_pct_median": 8.73868796534031,
+      "dark_frac_rgb_max": 0.0,
+      "sat_frac_rgb_max": 0.0001538935056940597,
+      "representative": "img_0001.jpg",
+      "ruler": {
+        "x1": 333.5,
+        "y1": 281.6,
+        "x2": 333.5,
+        "y2": 451.8,
+        "mm": 70.0,
+        "px": 170.2,
+        "mm_per_px": 0.4112808460634548
+      },
+      "mm_per_px": 0.4112808460634548,
+      "fov_w_mm": 263.21974148061105,
+      "fov_h_mm": 197.4148061104583
+    }
+  ]
+}

@@ -1,0 +1,973 @@
+{
+  "schema_version": "v3",
+  "generated_at": "2026-10-12",
+  "task": "handoff/2026-10-09_p03_fd5640-danh-gia (Coder Vong 2 - PLAN Vong 3 & D080)",
+  "baselines_1709_ov3660": {
+    "200mm": {
+      "session_id": "capture_qh_200mm",
+      "ruler_json_hist": "docs/logs/ruler-ticks-2026-09-17-qh200.json",
+      "ruler_json_v3_recheck": "docs/logs/p03_fd5640/v3/ruler-ticks-v3-qh200.json",
+      "sharpness_json_hist": "docs/logs/sharpness_20260917_quang_hoc/summary.json",
+      "sharpness_json_v3_recheck": "docs/logs/p03_fd5640/v3/sharpness-v3-qh-hist/summary.json",
+      "band": [
+        318,
+        338,
+        4,
+        182
+      ],
+      "lag": [
+        25,
+        70
+      ],
+      "edge": [
+        255,
+        200,
+        380
+      ],
+      "roi_hist": [
+        255,
+        0,
+        120,
+        395
+      ],
+      "fit_px_per_cm": 41.2,
+      "mm_per_px": 0.2427,
+      "fov_w_mm": 155.3,
+      "fov_h_mm": 116.5,
+      "n_ticks": 4,
+      "tick_y": [
+        47,
+        85,
+        128,
+        170
+      ],
+      "edge_width_px_per_image": [
+        5.6,
+        5.55,
+        5.43,
+        5.64,
+        5.6
+      ],
+      "edge_width_px_median": 5.6,
+      "edge_width_mm": 1.359,
+      "s1_threshold_mm": 1.0872,
+      "lap_var_median": 10.326302719800506,
+      "lap_var_min": 10.193886485231635,
+      "lap_var_max": 10.534055387846664,
+      "grad_energy_median": 525.1850605942985,
+      "recheck_exact_match": true
+    },
+    "250mm": {
+      "session_id": "capture_qh_250mm",
+      "ruler_json_hist": "docs/logs/ruler-ticks-2026-09-17-qh250.json",
+      "ruler_json_v3_recheck": "docs/logs/p03_fd5640/v3/ruler-ticks-v3-qh250.json",
+      "sharpness_json_hist": "docs/logs/sharpness_20260917_quang_hoc/summary.json",
+      "sharpness_json_v3_recheck": "docs/logs/p03_fd5640/v3/sharpness-v3-qh-hist/summary.json",
+      "band": [
+        322,
+        340,
+        4,
+        188
+      ],
+      "lag": [
+        18,
+        60
+      ],
+      "edge": [
+        280,
+        205,
+        340
+      ],
+      "roi_hist": [
+        280,
+        0,
+        95,
+        350
+      ],
+      "fit_px_per_cm": 32.2,
+      "mm_per_px": 0.3106,
+      "fov_w_mm": 198.8,
+      "fov_h_mm": 149.1,
+      "n_ticks": 6,
+      "tick_y": [
+        19,
+        51,
+        84,
+        115,
+        148,
+        180
+      ],
+      "edge_width_px_per_image": [
+        4.08,
+        4.37,
+        4.45,
+        4.21,
+        4.32
+      ],
+      "edge_width_px_median": 4.32,
+      "edge_width_mm": 1.342,
+      "s1_threshold_mm": 1.0736,
+      "lap_var_median": 13.916638543505886,
+      "lap_var_min": 13.646129103403732,
+      "lap_var_max": 14.495597159121017,
+      "grad_energy_median": 780.7771598071931,
+      "recheck_exact_match": true
+    },
+    "350mm": {
+      "session_id": "capture_qh_350mm",
+      "ruler_json_hist": "docs/logs/ruler-ticks-2026-09-17-qh350.json",
+      "ruler_json_v3_recheck": "docs/logs/p03_fd5640/v3/ruler-ticks-v3-qh350.json",
+      "sharpness_json_hist": "docs/logs/sharpness_20260917_quang_hoc/summary.json",
+      "sharpness_json_v3_recheck": "docs/logs/p03_fd5640/v3/sharpness-v3-qh-hist/summary.json",
+      "band": [
+        328,
+        340,
+        4,
+        194
+      ],
+      "lag": [
+        15,
+        32
+      ],
+      "edge": [
+        297,
+        210,
+        305
+      ],
+      "roi_hist": [
+        297,
+        0,
+        71,
+        312
+      ],
+      "fit_px_per_cm": 22.7,
+      "mm_per_px": 0.4405,
+      "fov_w_mm": 281.9,
+      "fov_h_mm": 211.5,
+      "n_ticks": 9,
+      "tick_y": [
+        8,
+        32,
+        55,
+        79,
+        100,
+        123,
+        144,
+        168,
+        191
+      ],
+      "edge_width_px_per_image": [
+        2.62,
+        2.69,
+        2.83,
+        2.69,
+        2.92
+      ],
+      "edge_width_px_median": 2.69,
+      "edge_width_mm": 1.185,
+      "s1_threshold_mm": 0.948,
+      "lap_var_median": 46.35473287229464,
+      "lap_var_min": 42.060765880689026,
+      "lap_var_max": 48.80981942250609,
+      "grad_energy_median": 1526.0530154277699,
+      "recheck_exact_match": true
+    }
+  },
+  "fd5640_sessions": {
+    "fd200": {
+      "label": "fd200",
+      "session_id": "capture_fd5640_250mm",
+      "distance_key": "200mm",
+      "in_d080_gate": true,
+      "ruler_json": "docs/logs/p03_fd5640/v3/ruler-ticks-v3-fd200.json",
+      "sharpness_json": "docs/logs/p03_fd5640/v3/sharpness-v3-fd200/summary.json",
+      "band": [
+        330,
+        349,
+        280,
+        476
+      ],
+      "lag": [
+        22,
+        50
+      ],
+      "edge": [
+        283,
+        115,
+        240
+      ],
+      "roi": [
+        283,
+        102,
+        91,
+        374
+      ],
+      "ruler_arg": "capture_fd5640_250mm=339.5,294.7,339.5,447.8,50",
+      "fit_px_per_cm": 30.629,
+      "fit_resid_max_px": 0.39,
+      "mm_per_px": 0.3265,
+      "fov_w_mm": 209.0,
+      "fov_h_mm": 156.7,
+      "n_ticks": 6,
+      "tick_y": [
+        295,
+        326,
+        356,
+        387,
+        418,
+        448
+      ],
+      "edge_width_px_per_image": [
+        2.55,
+        2.57,
+        2.62,
+        2.56,
+        2.52
+      ],
+      "edge_width_mm_per_image": [
+        0.832575,
+        0.839105,
+        0.85543,
+        0.83584,
+        0.82278
+      ],
+      "edge_width_px_median": 2.56,
+      "edge_width_mm": 0.836,
+      "baseline_ov_edge_width_mm": 1.359,
+      "s1_threshold_mm": 1.0872,
+      "s1_change_pct_vs_ov": -38.48,
+      "s1_reduction_pct_vs_ov": 38.48,
+      "s1_verdict": "ĐẠT",
+      "lap_var_median": 46.58437585011977,
+      "lap_var_min": 43.786928928246496,
+      "lap_var_max": 47.580769053349385,
+      "lap_var_ratio_vs_ov_hist": 4.5112,
+      "lap_var_change_pct_vs_ov_hist": 351.12,
+      "grad_energy_median": 1528.0702549232815,
+      "grad_energy_ratio_vs_ov_hist": 2.9096,
+      "grad_energy_change_pct_vs_ov_hist": 190.96,
+      "within_session_spread_px_pct": 3.91,
+      "within_session_spread_mm_pct": 3.91
+    },
+    "fd250_r1": {
+      "label": "fd250_r1",
+      "session_id": "capture_p03_fd5640_250mm_r1",
+      "distance_key": "250mm",
+      "in_d080_gate": true,
+      "ruler_json": "docs/logs/p03_fd5640/v3/ruler-ticks-v3-fd250-r1.json",
+      "sharpness_json": "docs/logs/p03_fd5640/v3/sharpness-v3-fd250-r1/summary.json",
+      "band": [
+        325,
+        342,
+        272,
+        476
+      ],
+      "lag": [
+        18,
+        40
+      ],
+      "edge": [
+        290,
+        125,
+        238
+      ],
+      "roi": [
+        290,
+        115,
+        72,
+        361
+      ],
+      "ruler_arg": "capture_p03_fd5640_250mm_r1=333.5,281.6,333.5,451.8,70",
+      "fit_px_per_cm": 24.321,
+      "fit_resid_max_px": 0.39,
+      "mm_per_px": 0.4112,
+      "fov_w_mm": 263.1,
+      "fov_h_mm": 197.4,
+      "n_ticks": 8,
+      "tick_y": [
+        282,
+        306,
+        330,
+        355,
+        379,
+        403,
+        428,
+        452
+      ],
+      "edge_width_px_per_image": [
+        2.12,
+        2.14,
+        2.14,
+        2.13,
+        2.21
+      ],
+      "edge_width_mm_per_image": [
+        0.871744,
+        0.879968,
+        0.879968,
+        0.875856,
+        0.908752
+      ],
+      "edge_width_px_median": 2.14,
+      "edge_width_mm": 0.88,
+      "baseline_ov_edge_width_mm": 1.342,
+      "s1_threshold_mm": 1.0736,
+      "s1_change_pct_vs_ov": -34.43,
+      "s1_reduction_pct_vs_ov": 34.43,
+      "s1_verdict": "ĐẠT",
+      "lap_var_median": 58.349039013841114,
+      "lap_var_min": 56.801715843233964,
+      "lap_var_max": 59.66462614856389,
+      "lap_var_ratio_vs_ov_hist": 4.1928,
+      "lap_var_change_pct_vs_ov_hist": 319.28,
+      "grad_energy_median": 1728.8313569438917,
+      "grad_energy_ratio_vs_ov_hist": 2.2142,
+      "grad_energy_change_pct_vs_ov_hist": 121.42,
+      "within_session_spread_px_pct": 4.21,
+      "within_session_spread_mm_pct": 4.21
+    },
+    "fd250_r2": {
+      "label": "fd250_r2",
+      "session_id": "capture_p03_fd5640_250mm_r2",
+      "distance_key": "250mm",
+      "in_d080_gate": true,
+      "ruler_json": "docs/logs/p03_fd5640/v3/ruler-ticks-v3-fd250-r2.json",
+      "sharpness_json": "docs/logs/p03_fd5640/v3/sharpness-v3-fd250-r2/summary.json",
+      "band": [
+        322,
+        339,
+        272,
+        476
+      ],
+      "lag": [
+        18,
+        40
+      ],
+      "edge": [
+        285,
+        125,
+        238
+      ],
+      "roi": [
+        285,
+        115,
+        72,
+        361
+      ],
+      "ruler_arg": "capture_p03_fd5640_250mm_r2=330.5,281.7,330.5,452.3,70",
+      "fit_px_per_cm": 24.381,
+      "fit_resid_max_px": 0.81,
+      "mm_per_px": 0.4102,
+      "fov_w_mm": 262.5,
+      "fov_h_mm": 196.9,
+      "n_ticks": 8,
+      "tick_y": [
+        281,
+        306,
+        331,
+        355,
+        380,
+        403,
+        428,
+        452
+      ],
+      "edge_width_px_per_image": [
+        2.49,
+        2.49,
+        2.45,
+        2.56,
+        2.58
+      ],
+      "edge_width_mm_per_image": [
+        1.021398,
+        1.021398,
+        1.00499,
+        1.050112,
+        1.058316
+      ],
+      "edge_width_px_median": 2.49,
+      "edge_width_mm": 1.021,
+      "baseline_ov_edge_width_mm": 1.342,
+      "s1_threshold_mm": 1.0736,
+      "s1_change_pct_vs_ov": -23.92,
+      "s1_reduction_pct_vs_ov": 23.92,
+      "s1_verdict": "ĐẠT",
+      "lap_var_median": 44.59216474016768,
+      "lap_var_min": 43.61363281964425,
+      "lap_var_max": 45.02265684576295,
+      "lap_var_ratio_vs_ov_hist": 3.2042,
+      "lap_var_change_pct_vs_ov_hist": 220.42,
+      "grad_energy_median": 1603.4066056506167,
+      "grad_energy_ratio_vs_ov_hist": 2.0536,
+      "grad_energy_change_pct_vs_ov_hist": 105.36,
+      "within_session_spread_px_pct": 5.22,
+      "within_session_spread_mm_pct": 5.22
+    },
+    "fd250_r3": {
+      "label": "fd250_r3",
+      "session_id": "capture_p03_fd5640_250mm_r3",
+      "distance_key": "250mm",
+      "in_d080_gate": true,
+      "ruler_json": "docs/logs/p03_fd5640/v3/ruler-ticks-v3-fd250-r3.json",
+      "sharpness_json": "docs/logs/p03_fd5640/v3/sharpness-v3-fd250-r3/summary.json",
+      "band": [
+        322,
+        339,
+        272,
+        476
+      ],
+      "lag": [
+        18,
+        40
+      ],
+      "edge": [
+        285,
+        125,
+        238
+      ],
+      "roi": [
+        285,
+        115,
+        72,
+        361
+      ],
+      "ruler_arg": "capture_p03_fd5640_250mm_r3=330.5,282.1,330.5,452.4,70",
+      "fit_px_per_cm": 24.333,
+      "fit_resid_max_px": 0.58,
+      "mm_per_px": 0.411,
+      "fov_w_mm": 263.0,
+      "fov_h_mm": 197.3,
+      "n_ticks": 8,
+      "tick_y": [
+        282,
+        306,
+        331,
+        355,
+        380,
+        404,
+        428,
+        452
+      ],
+      "edge_width_px_per_image": [
+        2.58,
+        2.5,
+        2.57,
+        2.58,
+        2.53
+      ],
+      "edge_width_mm_per_image": [
+        1.06038,
+        1.0275,
+        1.05627,
+        1.06038,
+        1.03983
+      ],
+      "edge_width_px_median": 2.57,
+      "edge_width_mm": 1.056,
+      "baseline_ov_edge_width_mm": 1.342,
+      "s1_threshold_mm": 1.0736,
+      "s1_change_pct_vs_ov": -21.31,
+      "s1_reduction_pct_vs_ov": 21.31,
+      "s1_verdict": "ĐẠT",
+      "lap_var_median": 39.02031541673706,
+      "lap_var_min": 37.51307948211679,
+      "lap_var_max": 39.857889929786516,
+      "lap_var_ratio_vs_ov_hist": 2.8039,
+      "lap_var_change_pct_vs_ov_hist": 180.39,
+      "grad_energy_median": 1453.3859132510943,
+      "grad_energy_ratio_vs_ov_hist": 1.8615,
+      "grad_energy_change_pct_vs_ov_hist": 86.15,
+      "within_session_spread_px_pct": 3.11,
+      "within_session_spread_mm_pct": 3.11
+    },
+    "fd250_r4": {
+      "label": "fd250_r4",
+      "session_id": "capture_p03_fd5640_250mm_r4",
+      "distance_key": "250mm",
+      "in_d080_gate": true,
+      "ruler_json": "docs/logs/p03_fd5640/v3/ruler-ticks-v3-fd250-r4.json",
+      "sharpness_json": "docs/logs/p03_fd5640/v3/sharpness-v3-fd250-r4/summary.json",
+      "band": [
+        306,
+        322,
+        272,
+        476
+      ],
+      "lag": [
+        18,
+        40
+      ],
+      "edge": [
+        284,
+        125,
+        238
+      ],
+      "roi": [
+        284,
+        115,
+        65,
+        361
+      ],
+      "ruler_arg": "capture_p03_fd5640_250mm_r4=314.0,274,314,464.8,90",
+      "fit_px_per_cm": 21.2,
+      "fit_resid_max_px": 0.8,
+      "mm_per_px": 0.4717,
+      "fov_w_mm": 301.9,
+      "fov_h_mm": 226.4,
+      "n_ticks": 10,
+      "tick_y": [
+        274,
+        295,
+        316,
+        338,
+        359,
+        380,
+        401,
+        423,
+        444,
+        464
+      ],
+      "edge_width_px_per_image": [
+        3.0,
+        3.33,
+        3.02,
+        3.58,
+        3.31
+      ],
+      "edge_width_mm_per_image": [
+        1.4151,
+        1.570761,
+        1.424534,
+        1.688686,
+        1.561327
+      ],
+      "edge_width_px_median": 3.31,
+      "edge_width_mm": 1.561,
+      "baseline_ov_edge_width_mm": 1.342,
+      "s1_threshold_mm": 1.0736,
+      "s1_change_pct_vs_ov": 16.32,
+      "s1_reduction_pct_vs_ov": -16.32,
+      "s1_verdict": "CHƯA ĐẠT",
+      "lap_var_median": 44.74295421580939,
+      "lap_var_min": 43.62696235401178,
+      "lap_var_max": 45.35006335099224,
+      "lap_var_ratio_vs_ov_hist": 3.2151,
+      "lap_var_change_pct_vs_ov_hist": 221.51,
+      "grad_energy_median": 1611.1214573108723,
+      "grad_energy_ratio_vs_ov_hist": 2.0635,
+      "grad_energy_change_pct_vs_ov_hist": 106.35,
+      "within_session_spread_px_pct": 17.52,
+      "within_session_spread_mm_pct": 17.52
+    },
+    "fd250_r5": {
+      "label": "fd250_r5",
+      "session_id": "capture_p03_fd5640_250mm_r5",
+      "distance_key": "250mm",
+      "in_d080_gate": true,
+      "ruler_json": "docs/logs/p03_fd5640/v3/ruler-ticks-v3-fd250-r5.json",
+      "sharpness_json": "docs/logs/p03_fd5640/v3/sharpness-v3-fd250-r5/summary.json",
+      "band": [
+        306,
+        322,
+        272,
+        476
+      ],
+      "lag": [
+        18,
+        40
+      ],
+      "edge": [
+        284,
+        125,
+        238
+      ],
+      "roi": [
+        284,
+        115,
+        65,
+        361
+      ],
+      "ruler_arg": "capture_p03_fd5640_250mm_r5=314.0,274.7,314,465.1,90",
+      "fit_px_per_cm": 21.145,
+      "fit_resid_max_px": 0.47,
+      "mm_per_px": 0.4729,
+      "fov_w_mm": 302.7,
+      "fov_h_mm": 227.0,
+      "n_ticks": 10,
+      "tick_y": [
+        275,
+        296,
+        317,
+        338,
+        359,
+        380,
+        402,
+        423,
+        444,
+        465
+      ],
+      "edge_width_px_per_image": [
+        2.88,
+        2.77,
+        2.81,
+        3.1,
+        2.94
+      ],
+      "edge_width_mm_per_image": [
+        1.361952,
+        1.309933,
+        1.328849,
+        1.46599,
+        1.390326
+      ],
+      "edge_width_px_median": 2.88,
+      "edge_width_mm": 1.362,
+      "baseline_ov_edge_width_mm": 1.342,
+      "s1_threshold_mm": 1.0736,
+      "s1_change_pct_vs_ov": 1.49,
+      "s1_reduction_pct_vs_ov": -1.49,
+      "s1_verdict": "CHƯA ĐẠT",
+      "lap_var_median": 55.41431499651431,
+      "lap_var_min": 53.08081634498511,
+      "lap_var_max": 56.14146377623798,
+      "lap_var_ratio_vs_ov_hist": 3.9819,
+      "lap_var_change_pct_vs_ov_hist": 298.19,
+      "grad_energy_median": 1747.6751116416854,
+      "grad_energy_ratio_vs_ov_hist": 2.2384,
+      "grad_energy_change_pct_vs_ov_hist": 123.84,
+      "within_session_spread_px_pct": 11.46,
+      "within_session_spread_mm_pct": 11.46
+    },
+    "fd250_r6": {
+      "label": "fd250_r6",
+      "session_id": "capture_p03_fd5640_250mm_r6",
+      "distance_key": "250mm",
+      "in_d080_gate": true,
+      "ruler_json": "docs/logs/p03_fd5640/v3/ruler-ticks-v3-fd250-r6.json",
+      "sharpness_json": "docs/logs/p03_fd5640/v3/sharpness-v3-fd250-r6/summary.json",
+      "band": [
+        306,
+        322,
+        272,
+        476
+      ],
+      "lag": [
+        18,
+        40
+      ],
+      "edge": [
+        284,
+        125,
+        238
+      ],
+      "roi": [
+        284,
+        115,
+        65,
+        361
+      ],
+      "ruler_arg": "capture_p03_fd5640_250mm_r6=314.0,275,314,445.2,80",
+      "fit_px_per_cm": 21.267,
+      "fit_resid_max_px": 0.42,
+      "mm_per_px": 0.4702,
+      "fov_w_mm": 300.9,
+      "fov_h_mm": 225.7,
+      "n_ticks": 9,
+      "tick_y": [
+        275,
+        296,
+        318,
+        339,
+        360,
+        381,
+        403,
+        424,
+        445
+      ],
+      "edge_width_px_per_image": [
+        3.29,
+        3.03,
+        2.93,
+        2.88,
+        3.09
+      ],
+      "edge_width_mm_per_image": [
+        1.546958,
+        1.424706,
+        1.377686,
+        1.354176,
+        1.452918
+      ],
+      "edge_width_px_median": 3.03,
+      "edge_width_mm": 1.425,
+      "baseline_ov_edge_width_mm": 1.342,
+      "s1_threshold_mm": 1.0736,
+      "s1_change_pct_vs_ov": 6.18,
+      "s1_reduction_pct_vs_ov": -6.18,
+      "s1_verdict": "CHƯA ĐẠT",
+      "lap_var_median": 41.743272639787364,
+      "lap_var_min": 40.97419029023414,
+      "lap_var_max": 41.94298810090786,
+      "lap_var_ratio_vs_ov_hist": 2.9995,
+      "lap_var_change_pct_vs_ov_hist": 199.95,
+      "grad_energy_median": 1488.1470575231021,
+      "grad_energy_ratio_vs_ov_hist": 1.906,
+      "grad_energy_change_pct_vs_ov_hist": 90.6,
+      "within_session_spread_px_pct": 13.53,
+      "within_session_spread_mm_pct": 13.53
+    },
+    "fd350": {
+      "label": "fd350",
+      "session_id": "capture_fd5640_350mm",
+      "distance_key": "350mm",
+      "in_d080_gate": false,
+      "ruler_json": "docs/logs/p03_fd5640/v3/ruler-ticks-v3-fd350.json",
+      "sharpness_json": "docs/logs/p03_fd5640/v3/sharpness-v3-fd350/summary.json",
+      "band": [
+        318,
+        332,
+        246,
+        476
+      ],
+      "lag": [
+        12,
+        32
+      ],
+      "edge": [
+        291,
+        160,
+        236
+      ],
+      "roi": [
+        291,
+        152,
+        53,
+        324
+      ],
+      "ruler_arg": "capture_fd5640_350mm=325.0,251.8,325,461.4,120",
+      "fit_px_per_cm": 17.467,
+      "fit_resid_max_px": 0.62,
+      "mm_per_px": 0.5725,
+      "fov_w_mm": 366.4,
+      "fov_h_mm": 274.8,
+      "n_ticks": 13,
+      "tick_y": [
+        252,
+        269,
+        287,
+        304,
+        322,
+        339,
+        356,
+        374,
+        392,
+        409,
+        427,
+        444,
+        461
+      ],
+      "edge_width_px_per_image": [
+        2.04,
+        2.0,
+        2.02,
+        1.97,
+        1.99
+      ],
+      "edge_width_mm_per_image": [
+        1.1679,
+        1.145,
+        1.15645,
+        1.127825,
+        1.139275
+      ],
+      "edge_width_px_median": 2.0,
+      "edge_width_mm": 1.145,
+      "baseline_ov_edge_width_mm": 1.185,
+      "s1_threshold_mm": 0.948,
+      "s1_change_pct_vs_ov": -3.38,
+      "s1_reduction_pct_vs_ov": 3.38,
+      "s1_verdict": "CHƯA ĐẠT",
+      "lap_var_median": 38.6277682317228,
+      "lap_var_min": 38.33879348099372,
+      "lap_var_max": 39.12839236291278,
+      "lap_var_ratio_vs_ov_hist": 0.8333,
+      "lap_var_change_pct_vs_ov_hist": -16.67,
+      "grad_energy_median": 1729.34222384606,
+      "grad_energy_ratio_vs_ov_hist": 1.1332,
+      "grad_energy_change_pct_vs_ov_hist": 13.32,
+      "within_session_spread_px_pct": 3.5,
+      "within_session_spread_mm_pct": 3.5
+    }
+  },
+  "s4_stability_analysis": {
+    "250mm_official_r4_r5_r6_15_images": {
+      "sessions": [
+        "capture_p03_fd5640_250mm_r4",
+        "capture_p03_fd5640_250mm_r5",
+        "capture_p03_fd5640_250mm_r6"
+      ],
+      "n_images": 15,
+      "e_px_all_15": [
+        3.0,
+        3.33,
+        3.02,
+        3.58,
+        3.31,
+        2.88,
+        2.77,
+        2.81,
+        3.1,
+        2.94,
+        3.29,
+        3.03,
+        2.93,
+        2.88,
+        3.09
+      ],
+      "e_px_min": 2.77,
+      "e_px_median": 3.02,
+      "e_px_max": 3.58,
+      "spread_px_pct": 26.82,
+      "e_mm_session_scale_all_15": [
+        1.4151,
+        1.5708,
+        1.4245,
+        1.6887,
+        1.5613,
+        1.362,
+        1.3099,
+        1.3288,
+        1.466,
+        1.3903,
+        1.547,
+        1.4247,
+        1.3777,
+        1.3542,
+        1.4529
+      ],
+      "e_mm_min": 1.3099,
+      "e_mm_median": 1.4245,
+      "e_mm_max": 1.6887,
+      "spread_mm_session_scale_pct": 26.59,
+      "spread_mm_fixed_scale_pct": 26.82,
+      "threshold_pct": 10.0,
+      "verdict": "CHƯA ĐẠT",
+      "wall_only_sensitivity_15_images": {
+        "edge": [
+          284,
+          175,
+          238
+        ],
+        "e_px_all_15": [
+          2.45,
+          2.64,
+          2.61,
+          2.86,
+          2.93,
+          2.49,
+          2.49,
+          2.51,
+          2.65,
+          2.59,
+          2.73,
+          2.58,
+          2.47,
+          2.54,
+          2.62
+        ],
+        "e_px_min": 2.45,
+        "e_px_median": 2.59,
+        "e_px_max": 2.93,
+        "spread_px_pct": 18.53,
+        "e_mm_min": 1.1557,
+        "e_mm_median": 1.2248,
+        "e_mm_max": 1.3821,
+        "spread_mm_pct": 18.49,
+        "per_session": {
+          "fd250_r4": {
+            "edge": [
+              284,
+              175,
+              238
+            ],
+            "edge_width_px_per_image": [
+              2.45,
+              2.64,
+              2.61,
+              2.86,
+              2.93
+            ],
+            "edge_width_px_median": 2.64,
+            "edge_width_mm": 1.245,
+            "within_session_spread_px_pct": 18.18
+          },
+          "fd250_r5": {
+            "edge": [
+              284,
+              175,
+              238
+            ],
+            "edge_width_px_per_image": [
+              2.49,
+              2.49,
+              2.51,
+              2.65,
+              2.59
+            ],
+            "edge_width_px_median": 2.51,
+            "edge_width_mm": 1.187,
+            "within_session_spread_px_pct": 6.37
+          },
+          "fd250_r6": {
+            "edge": [
+              284,
+              175,
+              238
+            ],
+            "edge_width_px_per_image": [
+              2.73,
+              2.58,
+              2.47,
+              2.54,
+              2.62
+            ],
+            "edge_width_px_median": 2.58,
+            "edge_width_mm": 1.213,
+            "within_session_spread_px_pct": 10.08
+          }
+        }
+      }
+    },
+    "250mm_trace_r2_r3_10_images_same_boot": {
+      "sessions": [
+        "capture_p03_fd5640_250mm_r2",
+        "capture_p03_fd5640_250mm_r3"
+      ],
+      "n_images": 10,
+      "e_px_min": 2.45,
+      "e_px_median": 2.545,
+      "e_px_max": 2.58,
+      "spread_px_pct": 5.11,
+      "e_mm_min": 1.005,
+      "e_mm_median": 1.045,
+      "e_mm_max": 1.0604,
+      "spread_mm_pct": 5.3,
+      "note": "Chỉ có 10/15 ảnh (2 phiên cùng boot 1), dùng truy nguyên theo PLAN Vòng 3 mục 2, không đủ 15 ảnh để kết luận S4."
+    },
+    "200mm_status": {
+      "available_sessions": [
+        "capture_fd5640_250mm"
+      ],
+      "n_images_available": 5,
+      "n_images_required": 15,
+      "within_single_session_spread_px_pct": 3.91,
+      "within_single_session_spread_mm_pct": 3.91,
+      "verdict": "CHƯA ĐỦ DỮ LIỆU",
+      "required_new_sessions": [
+        "capture_p03_fd5640_200mm_r1",
+        "capture_p03_fd5640_200mm_r2",
+        "capture_p03_fd5640_200mm_r3"
+      ]
+    }
+  }
+}

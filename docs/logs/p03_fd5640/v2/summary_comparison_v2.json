@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-10-12",
+  "task": "handoff/2026-10-09_p03_fd5640-danh-gia (Plan Vong 2, Phan A: S1-S4)",
+  "commands_executed": [
+    {
+      "cmd": "D:/scanner3d/.venv/Scripts/python.exe -B pc/ruler_ticks.py D:/datascanner3d/raw/capture_p03_fd5640_250mm_r1 --band 325,342,272,476 --lag 18,40 --edge 290,125,238 --json docs/logs/p03_fd5640/v2/ruler-fd250-r1.json",
+      "exit_code": 0,
+      "output_file": "docs/logs/p03_fd5640/v2/ruler-fd250-r1.json"
+    },
+    {
+      "cmd": "D:/scanner3d/.venv/Scripts/python.exe -B pc/ruler_ticks.py D:/datascanner3d/raw/capture_fd5640_350mm --band 318,332,246,476 --lag 12,32 --edge 291,160,236 --json docs/logs/p03_fd5640/v2/ruler-fd350.json",
+      "exit_code": 0,
+      "output_file": "docs/logs/p03_fd5640/v2/ruler-fd350.json"
+    },
+    {
+      "cmd": "D:/scanner3d/.venv/Scripts/python.exe -B pc/ruler_ticks.py D:/datascanner3d/raw/capture_fd5640_250mm --band 330,349,280,476 --lag 22,50 --edge 283,115,240 --json docs/logs/p03_fd5640/v2/ruler-fd200.json",
+      "exit_code": 0,
+      "output_file": "docs/logs/p03_fd5640/v2/ruler-fd200.json"
+    },
+    {
+      "cmd": "D:/scanner3d/.venv/Scripts/python.exe -B pc/sharpness.py D:/datascanner3d/raw/capture_p03_fd5640_250mm_r1 --roi 290,115,72,361 --ruler capture_p03_fd5640_250mm_r1=333.5,281.8,333.5,452.0,70 --out docs/logs/p03_fd5640 --report-id sharpness-v2-fd250-r1 --annotate",
+      "exit_code": 0,
+      "output_dir": "docs/logs/p03_fd5640/sharpness-v2-fd250-r1"
+    },
+    {
+      "cmd": "D:/scanner3d/.venv/Scripts/python.exe -B pc/sharpness.py D:/datascanner3d/raw/capture_fd5640_350mm --roi 291,152,53,324 --ruler capture_fd5640_350mm=325.0,251.8,325.0,461.4,120 --out docs/logs/p03_fd5640 --report-id sharpness-v2-fd350 --annotate",
+      "exit_code": 0,
+      "output_dir": "docs/logs/p03_fd5640/sharpness-v2-fd350"
+    },
+    {
+      "cmd": "D:/scanner3d/.venv/Scripts/python.exe -B pc/sharpness.py D:/datascanner3d/raw/capture_fd5640_250mm --roi 283,102,91,374 --ruler capture_fd5640_250mm=339.5,295.1,339.5,448.2,50 --out docs/logs/p03_fd5640 --report-id sharpness-v2-fd200 --annotate",
+      "exit_code": 0,
+      "output_dir": "docs/logs/p03_fd5640/sharpness-v2-fd200"
+    }
+  ],
+  "wall_only_edge_sensitivity_check": {
+    "fd250_r1_wall_y175_238": {
+      "edge": [
+        290,
+        175,
+        238
+      ],
+      "per_image_px": [
+        1.98,
+        2.02,
+        1.99,
+        2.04,
+        2.04
+      ],
+      "median_px": 2.02,
+      "mm": 0.831
+    },
+    "fd350_wall_y185_236": {
+      "edge": [
+        291,
+        185,
+        236
+      ],
+      "per_image_px": [
+        2.0,
+        2.0,
+        2.02,
+        1.97,
+        1.98
+      ],
+      "median_px": 2.0,
+      "mm": 1.145
+    },
+    "fd200_wall_y175_240": {
+      "edge": [
+        283,
+        175,
+        240
+      ],
+      "per_image_px": [
+        2.38,
+        2.39,
+        2.44,
+        2.4,
+        2.4
+      ],
+      "median_px": 2.4,
+      "mm": 0.784
+    }
+  },
+  "baseline_1709_recheck": {
+    "qh200": {
+      "fit_px_per_cm": 41.2,
+      "mm_per_px": 0.2427,
+      "edge_width_px_median": 5.6,
+      "edge_width_mm": 1.359
+    },
+    "qh250": {
+      "fit_px_per_cm": 32.2,
+      "mm_per_px": 0.3106,
+      "edge_width_px_median": 4.32,
+      "edge_width_mm": 1.342
+    },
+    "qh350": {
+      "fit_px_per_cm": 22.7,
+      "mm_per_px": 0.4405,
+      "edge_width_px_median": 2.69,
+      "edge_width_mm": 1.185
+    }
+  }
+}

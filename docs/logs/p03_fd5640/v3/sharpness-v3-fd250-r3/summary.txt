@@ -1,0 +1,16 @@
+phien                           n kich_thuoc  lap_var_med  lap_var_min  lap_var_max grad_med   mean sat_max      mm/px  fov_w_mm
+--------------------------------------------------------------------------------------------------------------------------------
+capture_p03_fd5640_250mm_r3     5 640x480           39.0         37.5         39.9    1453  136.4   0.000     0.4110     263.1
+
+Phien capture_p03_fd5640_250mm_r3
+  thu muc      : D:\datascanner3d\raw\capture_p03_fd5640_250mm_r3
+  note         : FD5640 500W-V11, 250 mm that (do tu mat truoc ong kinh), r3 cung bo tri/tieu diem voi r1-r2; den phong
+  framesize    : VGA, anh 640x480, ROI x,y,w,h = 285,115,72,361
+  anh hop le   : 5 (bo 0 anh decode_ok=False theo frames.csv)
+  lap_var      : trung vi 39.0, min 37.5, max 39.9
+  grad_energy  : trung vi 1453
+  do sang ROI  : mean 136.4, std 39.8; bao hoa toi da 0.000, toi toi da 0.000
+  mau RGB ROI  : mean R=138.5 G=136.7 B=129.2; spread kenh mau 6.9%; bao hoa/toi bat ky kenh (max) 0.004% / 0.000%
+  anh dai dien : img_0002.jpg
+  thuoc        : (330,282)-(330,452) = 170.3 px = 70.0 mm -> 0.4110 mm/px
+  truong nhin  : 263.1 x 197.3 mm o mat thuoc (gia dinh pixel vuong)

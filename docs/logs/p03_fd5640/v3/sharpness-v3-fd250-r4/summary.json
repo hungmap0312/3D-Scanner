@@ -1,0 +1,72 @@
+{
+  "report_id": "sharpness-v3-fd250-r4",
+  "created_at": "2026-10-13T00:00:57.775+07:00",
+  "script": "pc/sharpness.py",
+  "source": {
+    "commit": "267a0d6506eb5602291392fb7b5571c9796e8311",
+    "branch": "docs/p03-fd5640-danh-gia",
+    "dirty": false
+  },
+  "args": {
+    "roi": [
+      "284,115,65,361"
+    ],
+    "ruler": [
+      "capture_p03_fd5640_250mm_r4=314.0,274,314,464.8,90"
+    ],
+    "sessions": [
+      "D:/datascanner3d/raw/capture_p03_fd5640_250mm_r4"
+    ]
+  },
+  "annotated": [
+    "annotated_capture_p03_fd5640_250mm_r4.jpg"
+  ],
+  "sessions": [
+    {
+      "session_id": "capture_p03_fd5640_250mm_r4",
+      "dir": "D:\\datascanner3d\\raw\\capture_p03_fd5640_250mm_r4",
+      "framesize": "VGA",
+      "note": "FD5640 500W-V11, 250 mm that (do tu mat truoc ong kinh), r4 cung bo tri/tieu diem voi r2-r3; den phong",
+      "capture_commit": "48c52a579d4cafd0b50027b3ece11a4be57515c6",
+      "started_at": "2026-10-12T23:28:14.664+07:00",
+      "verdict": "PASS",
+      "skipped_decode_fail": 0,
+      "n_images": 5,
+      "width": 640,
+      "height": 480,
+      "roi": [
+        284,
+        115,
+        65,
+        361
+      ],
+      "lap_var_median": 44.74295421580939,
+      "lap_var_min": 43.62696235401178,
+      "lap_var_max": 45.35006335099224,
+      "grad_energy_median": 1611.1214573108723,
+      "mean_median": 129.27994886000425,
+      "std_median": 32.84117071909623,
+      "sat_frac_max": 0.0,
+      "dark_frac_max": 0.0,
+      "mean_r_median": 128.59876411676964,
+      "mean_g_median": 132.02493074792244,
+      "mean_b_median": 117.3746004687833,
+      "channel_spread_pct_median": 11.688687014815923,
+      "dark_frac_rgb_max": 0.0,
+      "sat_frac_rgb_max": 0.0,
+      "representative": "img_0002.jpg",
+      "ruler": {
+        "x1": 314.0,
+        "y1": 274.0,
+        "x2": 314.0,
+        "y2": 464.8,
+        "mm": 90.0,
+        "px": 190.8,
+        "mm_per_px": 0.4716981132075471
+      },
+      "mm_per_px": 0.4716981132075471,
+      "fov_w_mm": 301.88679245283015,
+      "fov_h_mm": 226.4150943396226
+    }
+  ]
+}

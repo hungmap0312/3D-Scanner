@@ -405,6 +405,33 @@ xa) vẫn giữ CHƯA ĐẠT theo trọng tài tuần 2 riêng. Đây là cổng
 việc khoá phơi sáng/màu của C2, đo và qua **trước khi** đối chiếu O3/O4
 trên cùng phiên. Không hạ ngưỡng sau khi đo.
 
+### 10.3 Tiêu chí so sánh đánh giá camera FD5640 với OV3660 (P03) — ĐỀ XUẤT, người dùng xác nhận ngày 2026-10-11 & 2026-10-12 (D076, D077, D080)
+
+Bổ sung để phục vụ quyết định D076 (thử FD5640 trước; thay hẳn OV3660 nếu tốt
+hơn). Ngày 2026-10-11 (D077), người dùng xác nhận chọn phương án B của kế hoạch
+P03: giữ bộ tiêu chí S1–S4 (với S4 theo hướng tiêu điểm cố định có ghi nhận),
+tách phần phân tích ảnh (phần A: S1–S4) khỏi phép đo nhiệt (phần B: S5), không
+mua nhiệt kế ngoài mà dùng cảm biến nhiệt trong chip ESP32-S3 làm chỉ báo tương
+đối (thuộc đầu việc `p15`). Ngày 2026-10-12 (D080, `handoff/2026-10-09_p03_fd5640-danh-gia/01_PLAN.md` Vòng 3),
+người dùng chốt đánh giá S1–S4 tại **200 mm và 250 mm**, **bỏ 350 mm khỏi cổng**
+(chỉ giữ 350 mm làm thông tin tham khảo vì khoảng làm việc thực tế của máy quét
+là 200–250 mm), và đồng bộ hợp đồng S5 với `p15` Vòng 2.
+
+| Mã | Đại lượng và cách đo | Đơn vị | Ngưỡng đề xuất để khuyến nghị “tốt hơn” | Khi thiếu hoặc chưa đạt |
+| --- | --- | --- | --- | --- |
+| S1 | Độ nét: bề rộng mép 10–90 % trên cạnh thẳng của khối quy ra mm ở mặt vật bằng `pc/ruler_ticks.py` trên toàn bộ 5 ảnh mỗi phiên tại 200 mm và 250 mm; `pc/sharpness.py` xuất `lap_var`/`grad_energy` cùng ROI vật lý để đối chiếu phụ (không làm ngưỡng độc lập) | mm | Mép trung vị giảm **ít nhất 20 % ở cả 200 mm và 250 mm** so với JSON đối chứng OV3660 ngày 17/09: `E200 ≤ 0,8 × 1,359 = 1,0872 mm`, `E250 ≤ 0,8 × 1,342 = 1,0736 mm` (tính từ tệp JSON, chấm từng phiên hợp lệ đã phân tích riêng, không chọn phiên đẹp nhất hoặc trộn bố trí) | Thiếu vùng đo/chu kỳ tin cậy hoặc thiếu khoảng cách → `CHƯA ĐỦ DỮ LIỆU`; có phiên hoặc khoảng cách chưa đạt → ghi đúng phiên/khoảng đó, không kết luận đạt cả hai (kết quả 350 mm `E_OV350 = 1,185 mm` chỉ giữ làm thông tin tham khảo) |
+| S2 | Vạch mm: đánh dấu cùng đoạn 1 cm gần tâm trên ảnh gốc (phóng to `Nearest-Neighbor`, không làm nét hay nội suy tạo chi tiết); Coder đánh dấu, Reviewer đếm lại độc lập | vạch / 9 | Phân biệt được **đủ 9/9 vạch 1 mm nội bộ trong 1 cm** (11 vạch tính hai đầu) trên **5/5 ảnh mỗi phiên chấm tại 200 mm và 250 mm**, đối chiếu với 17/09 (“không phân biệt được”); không coi vạch cm tự động là chứng minh vạch mm | Loá, che, mờ hoặc bất đồng khi đếm → chưa chứng minh; không đoán vạch theo vị trí dự kiến. Đây là phép đếm riêng của P03, **không thay O4** |
+| S3 | Ổn định thu ảnh ngắn hạn: chấm toàn bộ các phiên lặp tại điểm chính 250 mm (tối thiểu 3 phiên × 5 ảnh = 15 ảnh; hiện có `r1–r6` = 30 ảnh) và điểm phụ 200 mm (thay 350 mm; tối thiểu 1 phiên × 5 ảnh, tính toàn bộ khi thêm ảnh 200 mm cho S4) bằng `pc/capture_session.py`, VGA 640×480, quality 10, tắt stream | ảnh, lỗi | FD5640 đạt **tối thiểu 15/15 ảnh tại 250 mm** (chấm đủ **30/30 ảnh `r1–r6`** hiện có, không dừng ở 15 ảnh đẹp) và **5/5 ảnh hiện có tại 200 mm** (cộng toàn bộ ảnh 200 mm mới khi thu thêm cho S4); **0 retry, 0 lỗi kết nối, 0 reset bất ngờ trong phiên, 0 timestamp trùng hoặc lùi**, đủ `count − 1` phép so timestamp mỗi phiên | Thiếu lượt chụp → `CHƯA ĐỦ DỮ LIỆU`; reset có ghi nhận giữa các phiên không phải lỗi (không kiểm timestamp tăng liên tục qua các lần khởi động khác nhau); chưa thay kiểm chứng quét dài 200 góc hay C5/C7 |
+| S4 | Tiêu điểm cố định có ghi nhận: tại **mỗi khoảng cách (200 mm và 250 mm)**, ghi nhận bố trí/gá, vị trí ống kính giữ nguyên, không chỉnh/không chạy lấy nét giữa các ảnh và lượt, cấu hình/firmware, các lần tháo/lắp/reset + độ biến thiên bề rộng mép `E_i` (mm) trên **15 ảnh cùng bố trí** với phương pháp nhất quán | % | Có đầy đủ ghi nhận cố định bố trí/tiêu điểm trong chuỗi thử (không yêu cầu lệnh khoá AF mới hay phần cứng VCM mới), và **độ biến thiên `(max(E_i) − min(E_i)) / median(E_i) ≤ 10 %`** (`median(E_i) > 0`, `E_i` tính bằng `mm`, một ROI/thuật toán nhất quán cho cả bộ 15 ảnh cùng bố trí tại mỗi khoảng cách: `250 mm` dùng `r4–r6`; `200 mm` dùng bộ 3 phiên mới `capture_p03_fd5640_200mm_r1`…`r3`) | Chưa đủ 15 ảnh cùng bố trí ở khoảng cách nào (hiện 200 mm mới có 1 phiên 5 ảnh cũ) → S4 tại khoảng cách đó `CHƯA ĐỦ DỮ LIỆU`, không suy từ khoảng cách kia. Tính thêm từng phiên để truy nguyên nhưng kết luận bằng cả bộ 15 ảnh, không bỏ ảnh qua reset. Nếu cơ chế lấy nét thực chưa biết, ghi rõ `"tiêu điểm ổn định trong bố trí/chuỗi ảnh đã thử; khả năng khoá AF CHƯA KIỂM CHỨNG"` |
+| S5 | Chỉ báo tăng nhiệt lõi chip ESP32-S3 tương đối (sau cổng `p15`, đồng bộ `p15` Vòng 2): 3 cặp lượt độc lập `OV→FD`, `FD→OV`, `OV→FD` trên cùng chip/bo/firmware/điều kiện, tải VGA q10 (40 ảnh, cách 3 s sau baseline `t0`, tối đa 120 s; hai baseline trong cặp chênh `≤ 2 °C`), lấy mẫu tại `t0, +5, +15, +30, +60, +120 s` (lệch `≤ 2 s`); chỉ nhận HTTP 200, `valid=true`, `temperature_c` hữu hạn trong `[−10, 80] °C`, `configured_min_c=-10`, `configured_max_c=80`, có boot ID/uptime phù hợp | °C | Với `d(k,t) = [T_FD(k,t) − T_FD(k,0)] − [T_OV(k,t) − T_OV(k,0)]` và `D_k = max_{t ∈ {5,15,30,60,120}} d(k,t)`: đủ mẫu hợp lệ cả 3 cặp và **mọi `D_k ≤ 5 °C` → `ĐẠT theo chỉ báo`**; có cặp đầy đủ **`D_k > 5 °C` → `CHƯA ĐẠT theo chỉ báo`** (bỏ yêu cầu `range_reg`/`error_max` từng mẫu, giao dải động, cửa sổ `−5…75 °C` và biên tham khảo `4 °C` của Vòng 2; không tự gán sai số `±1 °C` hoặc nói sai số triệt tiêu) | Chưa qua cổng `p15` hoặc thiếu/lỗi/reset trong lượt/sai thời điểm → `CHƯA ĐO` / `CHƯA ĐỦ DỮ LIỆU`, không gán 0/nội suy hoặc làm tròn để đạt. Sai số tuyệt đối chưa xác định; luôn giữ nhãn chỉ báo, **nhiệt bề mặt module/ổn áp luôn `CHƯA ĐO`** |
+
+Quy tắc kèm theo:
+
+- Bộ S1–S5 **không thay O1–O4 (§10.1), O5–O7 của C2 (§10.2) hay trọng tài C7 (§18 / D016)**.
+- Phần A (S1–S4) được thực hiện và nghiệm thu độc lập tại mốc `B_A` trước khi có `p15`; phần B (S5) bổ sung tại mốc `B_B` sau khi `p15` qua cổng và người dùng thu log trên bo.
+- Không cộng điểm để lấy độ nét bù cho tiêu điểm hay nhiệt chưa biết. Chưa đạt hoặc chưa đủ S1–S5 thì giữ FD5640 ở trạng thái camera thử theo D076, chưa mở hiệu chuẩn A1 thật hoặc thu ảnh thật C5/C7.
+- Cảm biến trong ESP32-S3 chỉ báo nhiệt trong silicon, không đo nhiệt bề mặt module camera hay nơi người dùng báo nóng. **Không tự chốt thay hẳn camera khi nhiệt bề mặt còn `CHƯA ĐO`**; nếu người dùng quyết định thay hẳn trong tình trạng đó thì phải có mục quyết định `D` riêng trong `DECISIONS.md` ghi rõ việc chấp nhận rủi ro nhiệt bề mặt (D077).
+
 ## 11. Cơ khí bàn xoay và bố trí quang học `[MT §4]`
 
 ### 11.1 Cơ cấu

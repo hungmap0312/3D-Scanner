@@ -1,0 +1,72 @@
+{
+  "report_id": "sharpness-v3-fd350",
+  "created_at": "2026-10-13T00:01:42.339+07:00",
+  "script": "pc/sharpness.py",
+  "source": {
+    "commit": "267a0d6506eb5602291392fb7b5571c9796e8311",
+    "branch": "docs/p03-fd5640-danh-gia",
+    "dirty": false
+  },
+  "args": {
+    "roi": [
+      "291,152,53,324"
+    ],
+    "ruler": [
+      "capture_fd5640_350mm=325.0,251.8,325,461.4,120"
+    ],
+    "sessions": [
+      "D:/datascanner3d/raw/capture_fd5640_350mm"
+    ]
+  },
+  "annotated": [
+    "annotated_capture_fd5640_350mm.jpg"
+  ],
+  "sessions": [
+    {
+      "session_id": "capture_fd5640_350mm",
+      "dir": "D:\\datascanner3d\\raw\\capture_fd5640_350mm",
+      "framesize": "VGA",
+      "note": "FD5640 500W-V11, 350 mm, bo tri nhu 17/09; den phong",
+      "capture_commit": "2421f5a30cb23fe08c3689bfc6d0174948adeaf2",
+      "started_at": "2026-10-11T19:11:39.804+07:00",
+      "verdict": "PASS",
+      "skipped_decode_fail": 0,
+      "n_images": 5,
+      "width": 640,
+      "height": 480,
+      "roi": [
+        291,
+        152,
+        53,
+        324
+      ],
+      "lap_var_median": 38.6277682317228,
+      "lap_var_min": 38.33879348099372,
+      "lap_var_max": 39.12839236291278,
+      "grad_energy_median": 1729.34222384606,
+      "mean_median": 139.90956207780107,
+      "std_median": 39.9856419732604,
+      "sat_frac_max": 0.0,
+      "dark_frac_max": 0.0,
+      "mean_r_median": 140.16101793617517,
+      "mean_g_median": 141.43576752853483,
+      "mean_b_median": 132.9480549732122,
+      "channel_spread_pct_median": 5.925631329851979,
+      "dark_frac_rgb_max": 0.0,
+      "sat_frac_rgb_max": 0.0,
+      "representative": "img_0001.jpg",
+      "ruler": {
+        "x1": 325.0,
+        "y1": 251.8,
+        "x2": 325.0,
+        "y2": 461.4,
+        "mm": 120.0,
+        "px": 209.59999999999997,
+        "mm_per_px": 0.5725190839694657
+      },
+      "mm_per_px": 0.5725190839694657,
+      "fov_w_mm": 366.41221374045807,
+      "fov_h_mm": 274.80916030534354
+    }
+  ]
+}

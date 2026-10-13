@@ -118,6 +118,16 @@ Nguồn: lời người dùng và một ảnh nhãn adapter ngày 11/10/2026. �
 | --- | --- | --- | --- | --- |
 | Adapter nguồn 12 V 3 A, đầu cắm 5,5 × 2,1 mm | 1 bộ | **ĐÃ NHẬN (11/10)**; thay các dòng "chờ nhận" ngày 08/10 và 10/10 ở trên. ĐỌC TỪ ẢNH: nhãn `AC/DC ADAPTOR`, `MODEL:1230`, `INPUT:AC100-240V 50/60Hz`, `OUTPUT:12V DC 3A`; ký hiệu cực tính trên nhãn là tâm dương (+) ở đầu cắm; dấu CE, FCC, RoHS, UKCA; phích cắm hai chân dẹt kiểu Mỹ; cáp có một lõi ferrite | D9 / BOM B01 (nguồn chính hệ thống: motor A4988, đầu vào của mạch buck XL4005 cho camera S3, PCB). Hết chặn p11/p13 về nguồn 12 V (hai việc vẫn bị chặn bởi vật tư và việc khác) | Chưa đo điện áp thực không tải và có tải, gợn, cực tính trên jack bằng VOM (VOM chưa về); nhãn tự khai, chưa có chứng nhận hay datasheet. Phích dẹt kiểu Mỹ so với ổ cắm đang dùng chưa kiểm. `MODEL:1230` là mã nhãn của adapter này, **không** liên quan module laser SYD1230. Chưa kiểm đầu cắm có khớp jack của A4988/PCB và mạch XL4005 (chưa nối) |
 
+### Cập nhật vật tư 12/10/2026 — nút dừng khẩn cấp; số đo VOM hai adapter
+
+Nguồn: lời người dùng ngày 12/10/2026 kèm bốn ảnh nút dừng khẩn cấp. Bốn ảnh lưu thu nhỏ 1500×2000 (đã áp EXIF; nguyên bản 3024×4032 không lưu) tại `docs/logs/estop-la38-{canh,vit-24-12,vit-11-23,nhan}-2026-10-12.jpg` (người dùng cho phép 12/10). Ghi bởi phiên Điều phối theo ngoại lệ người dùng cho phép (D079). Phép đo VOM là **người dùng báo**: đo bằng VOM của công ty, **model, thang đo, sai số và điều kiện tải (không tải hay có tải) chưa ghi**.
+
+| Linh kiện / Vật tư | Số lượng | Trạng thái người dùng xác nhận | Đối chiếu vị trí | Phần chưa kiểm chứng |
+| --- | --- | --- | --- | --- |
+| Nút dừng khẩn cấp dạng nấm đỏ | 1 cái | ĐÃ CÓ (12/10). **NGƯỜI DÙNG QUAN SÁT KỸ VÀ XÁC NHẬN: 2 tiếp điểm NC.** ĐỌC TỪ ẢNH: nhãn `CNAOM LA38`, `Ui:440V AC-15`, `Ith:10A DC-13`, `GB/T14048.5`, dấu CCC, chữ Hán `奥盟电气集团有限公司`; số in cạnh hai cặp vít: `24`, `12` (khối thứ nhất) và `11`, `23` (khối thứ hai); thân nấm đỏ, vòng vàng, đai ốc đen, ren vàng, hai khối tiếp điểm trong suốt | HARDWARE_PREP B14 (SW2: nút nhấn NC có hai cặp tiếp điểm NC). D050 đã bỏ yêu cầu liên động: **không còn điều kiện chặn**, dùng tuỳ chọn (ví dụ cắt 12 V cấp động cơ ở B2) | Chưa đo thông mạch hai cặp NC; chưa xác định vít nào thuộc cặp tiếp điểm nào (số `11/12` và `23/24` chưa đối chiếu); chưa thử cơ chế khoá giữ và nhả; điện áp DC cho phép không ghi trên nhãn (chỉ `DC-13`, `Ith 10 A`); kích thước lỗ bắt mặt tủ chưa đo |
+| Adapter 12 V 3 A (D9) | (đã ghi 11/10) | **NGƯỜI DÙNG ĐO 12/10: 12,51 V** (+4,2 % so với 12 V danh định) | D9; nguồn motor/buck | Điều kiện tải chưa ghi, VOM chưa rõ sai số; chưa đo cực tính jack, gợn, điện áp dưới tải |
+| Nguồn 5 V 2 A (D063) | (đã ghi 10/10) | **NGƯỜI DÙNG ĐO 12/10: 5,47 V** (+9,4 % so với 5 V danh định, **cao hơn dải ±5 % = 4,75–5,25 V**) | Nguồn riêng cho laser ở C6 | Điều kiện tải chưa ghi (nguồn xung rẻ thường cao hơn lúc không tải); chưa đo dưới tải. **Module laser SYD1230 theo người bán 3–5 V**: điện áp này vượt mức trên của người bán; chọn trở nối tiếp tính theo 5,47 V (xem phiếu p01, D079) |
+
 ## Bảng nối dây — chỉ điền sau khi có bằng chứng
 
 | Bo | Chân | Đi tới | Mức logic / nguồn | Nguồn xác nhận | Trạng thái |

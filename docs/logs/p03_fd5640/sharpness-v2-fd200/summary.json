@@ -1,0 +1,72 @@
+{
+  "report_id": "sharpness-v2-fd200",
+  "created_at": "2026-10-12T19:19:45.613+07:00",
+  "script": "pc/sharpness.py",
+  "source": {
+    "commit": "274f1f862e63ad621f369acb72334dbe06c11063",
+    "branch": "docs/p03-fd5640-danh-gia",
+    "dirty": true
+  },
+  "args": {
+    "roi": [
+      "283,102,91,374"
+    ],
+    "ruler": [
+      "capture_fd5640_250mm=339.5,295.1,339.5,448.2,50"
+    ],
+    "sessions": [
+      "D:/datascanner3d/raw/capture_fd5640_250mm"
+    ]
+  },
+  "annotated": [
+    "annotated_capture_fd5640_250mm.jpg"
+  ],
+  "sessions": [
+    {
+      "session_id": "capture_fd5640_250mm",
+      "dir": "D:\\datascanner3d\\raw\\capture_fd5640_250mm",
+      "framesize": "VGA",
+      "note": "FD5640 500W-V11, 250 mm, bo tri nhu 17/09; den phong",
+      "capture_commit": "3b8677679f3ca50f0aef3dc23a1765a8f5744605",
+      "started_at": "2026-10-11T16:31:21.636+07:00",
+      "verdict": "PASS",
+      "skipped_decode_fail": 0,
+      "n_images": 5,
+      "width": 640,
+      "height": 480,
+      "roi": [
+        283,
+        102,
+        91,
+        374
+      ],
+      "lap_var_median": 46.58437585011977,
+      "lap_var_min": 43.786928928246496,
+      "lap_var_max": 47.580769053349385,
+      "grad_energy_median": 1528.0702549232815,
+      "mean_median": 130.17012399365342,
+      "std_median": 44.6053120783527,
+      "sat_frac_max": 0.0,
+      "dark_frac_max": 0.0,
+      "mean_r_median": 130.66180877945584,
+      "mean_g_median": 131.660280895575,
+      "mean_b_median": 121.75771287535993,
+      "channel_spread_pct_median": 7.943698717610114,
+      "dark_frac_rgb_max": 0.0,
+      "sat_frac_rgb_max": 0.0,
+      "representative": "img_0003.jpg",
+      "ruler": {
+        "x1": 339.5,
+        "y1": 295.1,
+        "x2": 339.5,
+        "y2": 448.2,
+        "mm": 50.0,
+        "px": 153.09999999999997,
+        "mm_per_px": 0.3265839320705422
+      },
+      "mm_per_px": 0.3265839320705422,
+      "fov_w_mm": 209.013716525147,
+      "fov_h_mm": 156.76028739386027
+    }
+  ]
+}
